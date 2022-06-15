@@ -36,10 +36,10 @@ CREATE TABLE profile(
 
 
 #------------------------------------------------------------
-# Table: match
+# Table: match_event
 #------------------------------------------------------------
 
-CREATE TABLE match(
+CREATE TABLE match_event(
         id         Int  Auto_increment  NOT NULL ,
         date       Date NOT NULL ,
         start_hour Time NOT NULL ,
@@ -50,9 +50,9 @@ CREATE TABLE match(
         address    Varchar (200) NOT NULL ,
         nb_player  Int NOT NULL ,
         mail       Varchar (100) NOT NULL
-	,CONSTRAINT match_PK PRIMARY KEY (id)
+	,CONSTRAINT match_event_PK PRIMARY KEY (id)
 
-	,CONSTRAINT match_profile_FK FOREIGN KEY (mail) REFERENCES profile(mail)
+	,CONSTRAINT match_event_profile_FK FOREIGN KEY (mail) REFERENCES profile(mail)
 )ENGINE=InnoDB;
 
 
@@ -66,7 +66,7 @@ CREATE TABLE sports(
         id      Int NOT NULL
 	,CONSTRAINT sports_PK PRIMARY KEY (name)
 
-	,CONSTRAINT sports_match_FK FOREIGN KEY (id) REFERENCES match(id)
+	,CONSTRAINT sports_match_event_FK FOREIGN KEY (id) REFERENCES match_event(id)
 )ENGINE=InnoDB;
 
 
@@ -81,7 +81,7 @@ CREATE TABLE participe_a(
         is_best_player Bool NOT NULL
 	,CONSTRAINT participe_a_PK PRIMARY KEY (id,mail)
 
-	,CONSTRAINT participe_a_match_FK FOREIGN KEY (id) REFERENCES match(id)
+	,CONSTRAINT participe_a_match_event_FK FOREIGN KEY (id) REFERENCES match_event(id)
 	,CONSTRAINT participe_a_profile0_FK FOREIGN KEY (mail) REFERENCES profile(mail)
 )ENGINE=InnoDB;
 
@@ -95,14 +95,11 @@ CREATE TABLE a_lieu_a(
         insee Int NOT NULL
 	,CONSTRAINT a_lieu_a_PK PRIMARY KEY (id,insee)
 
-	,CONSTRAINT a_lieu_a_match_FK FOREIGN KEY (id) REFERENCES match(id)
+	,CONSTRAINT a_lieu_a_match_event_FK FOREIGN KEY (id) REFERENCES match_event(id)
 	,CONSTRAINT a_lieu_a_city0_FK FOREIGN KEY (insee) REFERENCES city(insee)
 )ENGINE=InnoDB;
 
-#------------------------------------------------------------
-# Add a the profile user to BDD
-#------------------------------------------------------------
 
-CREATE USER 'default_user'@* IDENTIFIED BY 'p@ss_conn3ction';
-GRANT ALL PRIVILEGES ON projet.* TO 'default'@*;
+CREATE USER 'default_user'@'%' IDENTIFIED BY 'p@ss_conn3ction';
+GRANT ALL PRIVILEGES ON projet.* TO 'default'@'%';
 FLUSH PRIVILEGES;
