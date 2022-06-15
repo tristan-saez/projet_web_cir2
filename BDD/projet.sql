@@ -99,3 +99,10 @@ CREATE TABLE a_lieu_a(
 	,CONSTRAINT a_lieu_a_city0_FK FOREIGN KEY (insee) REFERENCES city(insee)
 )ENGINE=InnoDB;
 
+#------------------------------------------------------------
+# Add a the profile user to BDD
+#------------------------------------------------------------
+
+CREATE USER 'default_user'@* IDENTIFIED BY 'p@ss_conn3ction';
+GRANT ALL PRIVILEGES ON projet.* TO 'default'@*;
+FLUSH PRIVILEGES;
