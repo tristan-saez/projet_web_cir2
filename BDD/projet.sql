@@ -101,5 +101,5 @@ CREATE TABLE a_lieu_a(
 
 
 CREATE USER 'default_user'@'%' IDENTIFIED BY 'p@ss_conn3ction';
-GRANT ALL PRIVILEGES ON projet.* TO 'default'@'%';
+GRANT ALL PRIVILEGES ON projet.* TO 'default_user'@'%';
 FLUSH PRIVILEGES;
