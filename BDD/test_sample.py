@@ -32,6 +32,7 @@ insee = ""
 city =""
 
 city_file = open("commune2021.csv", "r", encoding="utf8")
+
 for line in city_file:
     tab = line.replace("'", "\\'").split(",")
     print("added : ", tab[1], " - ", tab[9])
