@@ -14,11 +14,13 @@
 // Check if a user is connected or not
 
 function CheckConnection() {
-    ajaxRequest('GET', 'php/connection.php/check-connection', redirectToConnect);
+    ajaxRequest('GET', 'php/connection.php/check-connection/', redirectToConnect);
 }
 
-function redirectToConnect() {
-    window.location.replace("connection.html");
+function redirectToConnect(isconnected) {
+    if(!isconnected) {
+        window.location.replace("connection.html");
+    }
 }
 
 CheckConnection();

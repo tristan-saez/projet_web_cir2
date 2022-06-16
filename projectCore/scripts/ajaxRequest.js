@@ -16,6 +16,7 @@
  // \param url The url with the data.
  // \param callback The callback to call where the request is successful.
  // \param data The data associated with the request.
+ 
  function ajaxRequest(type, url, callback, data = null)
  {
    let xhr;
