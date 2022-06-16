@@ -28,8 +28,6 @@ def execute_query(connection, query):
 
 
 connection = create_server_connection("localhost", "default_user", "p@ss_conn3ction", "projet")
-insee = ""
-city =""
 
 city_file = open("commune2021.csv", "r", encoding="utf8")
 
