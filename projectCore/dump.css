@@ -29,70 +29,17 @@ filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
 
 /* Rectangle 9 */
 
-box-sizing: border-box;
 
-position: absolute;
-width: 438px;
-height: 248px;
-left: 769px;
-top: 541px;
-
-background: #EF476F;
-opacity: 0.8;
-border: 2px solid #000000;
-box-shadow: 3px 6px 4px 3px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-
-
-/* Rectangle 3 */
-
-box-sizing: border-box;
-
-position: absolute;
-width: 438px;
-height: 248px;
-left: 280px;
-top: 231px;
-
-background: #63C317;
-opacity: 0.8;
-border: 2px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
 
 
 /* Rectangle 8 */
 
-box-sizing: border-box;
 
-position: absolute;
-width: 438px;
-height: 248px;
-left: 280px;
-top: 541px;
-
-background: #118AB2;
-opacity: 0.8;
-border: 2px solid #000000;
-box-shadow: 3px 6px 4px 3px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
 
 
 /* Rectangle 7 */
 
-box-sizing: border-box;
 
-position: absolute;
-width: 438px;
-height: 253px;
-left: 769px;
-top: 231px;
-
-background: #FFD166;
-opacity: 0.8;
-border: 2px solid #000000;
-box-shadow: 3px 6px 4px 3px rgba(0, 0, 0, 0.33);
-border-radius: 10px;
 
 
 /* Evènements */

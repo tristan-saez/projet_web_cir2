@@ -10,78 +10,41 @@
     left: 0px;
     top: 0px;
     display: flex;
-    background: #073B4C;
+    background:white;
+    border-radius: 2px;
+    border: solid;
+    border-color: #073B4C;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    flex-direction: row-reverse;
+
     }
 
     .pagetitle{
         position: absolute;
         width: 100px;
         height: 50px;
-        margin-left: 40%;
+        margin-right: 50%;
         top: 10px;
-        font-family: 'Jost';
+        font-family: 'Impact';
         font-style: normal;
         font-weight: 400;
         font-size: 48px;
         line-height: 69px;
         text-align: center;
-        color: #000000;
+        color:#073B4C;
         user-select: none;
     }   
 
-.menuicon1{
-    position: relative;
-    width: 52px;
-    height: 55px;
-/*     left: 75%;
-    top: 18px; */
-    margin-left: 80%;
-    margin-top: 17px;
-    background: url("/assets/icons/sport.png");
-    background-repeat: no-repeat;
-    background-size:47px;
-}
 
-.menuicon2{
-    position: relative;
-    width: 52px;
-    height: 55px;
-   /*  left: 79%;
-    top: 18px; */
-    margin-left: 2%;
-    margin-top: 17px;
-    background: url("/assets/icons/list.png");
-    background-repeat: no-repeat;
-    background-size:47px;
-}
-
-.menuicon3{
-    position: relative;
-    width: 52px;
-    height: 55px;
- /*    left: 83%;
-    top: 18px; */
-    margin-left: 2%;
-    margin-top: 17px;
-    background: url("/assets/icons/calendar.png");
-    background-repeat: no-repeat;
-    background-size:47px;}
-
-.menuicon4{
-    position: relative;
-    width: 52px;
-    height: 55px;
- /*    left: 87%;
-    top: 18px;  */
-    margin-left: 2%;
-    margin-right: 5%;
-    margin-top: 17px;
-    background: url("/assets/icons/profile.png");
-    background-repeat: no-repeat;
-    background-size:47px;
-}
-
-
+    .imgheader{
+        position: relative; 
+        margin-right: 3%; 
+        height: 60px; 
+        width: 60px;
+        top: 10px;
+    }
 
 /* BODY RELATED CONTENT  */
 
@@ -106,6 +69,76 @@ margin-bottom: 4%;
  */}
 
 
+#rect1{
+    /* Rectangle 3 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 23%;
+height: 248px;
+left: 280px;
+top: 231px;
+
+background: #63C317;
+opacity: 0.8;
+border: 2px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+}
+
+
+#rect2{
+    box-sizing: border-box;
+
+position: absolute;
+width: 23%;
+height: 253px;
+left: 769px;
+top: 231px;
+
+background: #FFD166;
+opacity: 0.8;
+border: 2px solid #000000;
+box-shadow: 3px 6px 4px 3px rgba(0, 0, 0, 0.33);
+border-radius: 10px;
+
+}
+
+
+#rect3{
+    box-sizing: border-box;
+
+position: absolute;
+width: 23%;
+height: 248px;
+left: 280px;
+top: 541px;
+
+background: #118AB2;
+opacity: 0.8;
+border: 2px solid #000000;
+box-shadow: 3px 6px 4px 3px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+    
+}
+
+#rect4{
+box-sizing: border-box;
+position: relative;
+width: 23%;
+height: 248px;
+left: 769px;
+top: 541px;
+
+background: #EF476F;
+opacity: 0.8;
+border: 2px solid #000000;
+box-shadow: 3px 6px 4px 3px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+}
+
+
 
 /* FOOTER RELATED CONTENT */
 
@@ -115,7 +148,12 @@ margin-bottom: 4%;
     height: 50px;
     bottom: 0px;
     left: 0px;
-    background: #073B4C;
+    border: solid;
+    border-color: #073B4C;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background: white;
 }   
 
 #flexboxfooter{
@@ -136,4 +174,5 @@ margin-bottom: 4%;
 .copyrighttext{
     font-size: 18px;
     user-select: none;
+    color: #073B4C;
 }
