@@ -9,6 +9,24 @@
 'use strict';
 
 //------------------------------------------------------------------------------
-//--- CheckConnection ----------------------------------------------------------
+//--- accountConnection -----------------------------------------------------------
 //------------------------------------------------------------------------------
-// Check if a user is connected or not
+// connect to an account with datas
+function accountConnection(username, password) {
+    ajaxRequest('POST', 'php/connection.php/account-connect');
+}
+
+function redirectAfterConnection(result) {
+    if(result == "success") {
+        window.location.replace("index.html");
+    } else if(result == "username") {
+        window.location.replace("connection.html");
+        alert("Utilisateur inconnu");
+    } else if(result == "password") {
+        window.location.replace("connection.html");
+        alert("Mot de passe incorrect");
+    } else if(result == "other") {
+        window.location.replace("connection.html");
+        alert("Une erreur est survenue veuilez reéssayer");
+    }
+}
