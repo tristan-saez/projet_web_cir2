@@ -131,8 +131,10 @@ box-sizing: border-box;
 position: relative;
 width: 23%;
 height: 248px;
-left: 769px;
-top: 541px;
+/* left: 769px;
+top: 541px; */
+margin-left: 51%;
+margin-top: 28%;
 
 background: #EF476F;
 opacity: 0.8;
