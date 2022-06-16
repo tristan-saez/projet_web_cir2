@@ -55,31 +55,32 @@ position: relative;
 background: #FFFFFF;
 background-image: url("/assets/icons/imagebackground.png");
 background-repeat:repeat;
-min-height: 500px;
 }
 
 
 .body-body{
 position: absolute;
 width: 100%;
-height: 920px;
 margin-top: 4%;
 margin-bottom: 4%;
-/* background-color: red;
- */}
+}
 
+
+.liketext{
+    user-select: none;
+}
+        /* INDEX PAGE */
 
 #rect1{
-    /* Rectangle 3 */
-
 box-sizing: border-box;
 
 position: absolute;
 width: 23%;
 height: 248px;
-left: 280px;
-top: 231px;
-
+/* left: 280px;
+top: 231px; */
+margin-left: 24%;
+margin-top: 12%;
 background: #63C317;
 opacity: 0.8;
 border: 2px solid #000000;
@@ -87,6 +88,19 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
 }
 
+#rect1text{
+position: relative;
+width: 257px;
+height: 113px;
+
+font-family: 'Lexend';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 50px;
+text-align: center;
+color: #000000;
+}
 
 #rect2{
     box-sizing: border-box;
@@ -94,8 +108,10 @@ border-radius: 10px;
 position: absolute;
 width: 23%;
 height: 253px;
-left: 769px;
-top: 231px;
+/* left: 769px;
+top: 231px; */
+margin-left: 52%;
+margin-top: 12%;
 
 background: #FFD166;
 opacity: 0.8;
@@ -115,7 +131,7 @@ height: 248px;
 /* left: 280px;
 top: 541px; */
 
-margin-left: 23%;
+margin-left: 24%;
 margin-top: 28%;
 
 background: #118AB2;
@@ -133,9 +149,8 @@ width: 23%;
 height: 248px;
 /* left: 769px;
 top: 541px; */
-margin-left: 51%;
+margin-left: 52%;
 margin-top: 28%;
-
 background: #EF476F;
 opacity: 0.8;
 border: 2px solid #000000;
@@ -143,6 +158,102 @@ box-shadow: 3px 6px 4px 3px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
 }
 
+                /* CONNEXION PAGE */
+
+        #connexionmainbox{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 750px;
+            border: solid;
+            background-color: white;
+            border-radius: 7px;
+            border-color:#073B4C;
+            border-style: double;
+/*             background: rgba(7, 59, 76, 0.7);
+ */
+            box-shadow: 5px 5px  rgba(7, 59, 76, 0.7);
+        }
+
+        #connexiontitle{
+            text-align: center;
+            position: fixed;
+            white-space: nowrap;
+            overflow:visible;
+            left: 50%;
+            font-family: 'Impact';
+            color: #073B4C;
+            top: 10%;
+            transform: translate(-50%, -50%);
+            opacity: 100%;
+            font-size: 2.5em;
+            user-select: none;
+        }
+
+        #connexionform{
+            position: fixed;
+            left: 13%;
+            height: 200px;
+            margin-top: 12%;
+            width: 74%;
+  
+        }
+
+        fieldset{
+            margin: 2em 0;
+            padding: 1em 2em;
+            border: solid 1px #ccc;
+            border-radius: 6px;
+            min-width: 200px;
+
+        }
+
+        label{
+            display: block;
+            margin-top: 1em;
+            margin-bottom: 3px;
+            font-family: 'Impact';
+            user-select: none;
+            font-size: larger;
+        }
+    
+        label:first-of-type{
+            margin-top: 0;
+        }
+
+        input{
+            padding: .5em;
+            border: solid 1px #aaa;
+        }
+
+        input[type="email"], input[type="password"], input[type="text"],input[type="number"]{
+            width: 23em;
+            border-radius: 6px;
+            font-family: 'Impact';
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+
+        input[type="submit"]{
+            width: 190px;
+            margin-top: 4em;
+            margin-left: 25%;
+            background-color: #073B4C;
+            color: wheat;
+            border-radius: 6px;
+            font-family: 'Impact';
+            font-size: 1em;
+        }
+
+        p{
+        margin-top: 3em;
+        font-family: 'Impact';
+        color: #073B4C;
+        text-align: center;
+        }
 
 
 /* FOOTER RELATED CONTENT */
