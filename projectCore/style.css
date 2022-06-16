@@ -1,5 +1,7 @@
  
-
+*{
+    font-family: 'Impact';
+}
 
 /* HEADER RELATED CONTENT */
 
@@ -40,7 +42,7 @@
 
     .imgheader{
         position: relative; 
-        margin-right: 3%; 
+        margin-right: 3%;         
         height: 60px; 
         width: 60px;
         top: 10px;
@@ -59,7 +61,7 @@ background-repeat:repeat;
 
 
 .body-body{
-position: absolute;
+    position: absolute;
 width: 100%;
 margin-top: 4%;
 margin-bottom: 4%;
@@ -68,19 +70,25 @@ margin-bottom: 4%;
 
 .liketext{
     user-select: none;
+    font-family: 'Impact';
+    color: red;
 }
+
+.cursor:hover{
+cursor: pointer;}
+
         /* INDEX PAGE */
 
 #rect1{
 box-sizing: border-box;
 
-position: absolute;
-width: 23%;
+/* position: absolute; */
+position: fixed;
+top: 41%;
+left: 36%;
+transform: translate(-50%, -50%);
+width: 450px; 
 height: 248px;
-/* left: 280px;
-top: 231px; */
-margin-left: 24%;
-margin-top: 12%;
 background: #63C317;
 opacity: 0.8;
 border: 2px solid #000000;
@@ -88,11 +96,12 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
 }
 
-#rect1text{
+#recttext{
 position: relative;
 width: 257px;
 height: 113px;
-
+margin-left: 20%;
+margin-top: 1em;
 font-family: 'Lexend';
 font-style: normal;
 font-weight: 400;
@@ -102,16 +111,25 @@ text-align: center;
 color: #000000;
 }
 
+#rectimg{
+    width: 70px;
+    margin-left: 43%;
+}
+
 #rect2{
     box-sizing: border-box;
 
-position: absolute;
+    position: fixed;
+top: 41%;
+left: 63%; 
+transform: translate(-50%, -50%);
+width: 450px; 
+height: 248px;
+/* position: absolute;
 width: 23%;
 height: 253px;
-/* left: 769px;
-top: 231px; */
 margin-left: 52%;
-margin-top: 12%;
+margin-top: 12%; */
 
 background: #FFD166;
 opacity: 0.8;
@@ -121,18 +139,23 @@ border-radius: 10px;
 
 }
 
-
 #rect3{
     box-sizing: border-box;
 
-position: absolute;
+    position: fixed;
+    top: 71%;
+    left: 36%; 
+    transform: translate(-50%, -50%);
+    width: 450px; 
+    height: 248px;
+/* position: absolute;
 width: 23%;
 height: 248px;
+margin-top: 28%;
+margin-left: 24%; */
 /* left: 280px;
 top: 541px; */
 
-margin-left: 24%;
-margin-top: 28%;
 
 background: #118AB2;
 opacity: 0.8;
@@ -144,13 +167,19 @@ border-radius: 10px;
 
 #rect4{
 box-sizing: border-box;
-position: relative;
+position: fixed;
+top: 71%;
+left: 63%; 
+transform: translate(-50%, -50%);
+width: 450px; 
+height: 248px;
+/* position: relative;
 width: 23%;
 height: 248px;
+margin-left: 52%;
+margin-top: 28%; */
 /* left: 769px;
 top: 541px; */
-margin-left: 52%;
-margin-top: 28%;
 background: #EF476F;
 opacity: 0.8;
 border: 2px solid #000000;
@@ -166,7 +195,7 @@ border-radius: 10px;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 600px;
-            height: 750px;
+            height: 780px;
             border: solid;
             background-color: white;
             border-radius: 7px;
@@ -212,7 +241,7 @@ border-radius: 10px;
 
         label{
             display: block;
-            margin-top: 1em;
+            margin-top: 0.5em;
             margin-bottom: 3px;
             font-family: 'Impact';
             user-select: none;
@@ -228,18 +257,18 @@ border-radius: 10px;
             border: solid 1px #aaa;
         }
 
-        input[type="email"], input[type="password"], input[type="text"],input[type="number"]{
+        input[type="email"], input[type="password"], input[type="text"],input[type="date"],input[type="file"]{
             width: 23em;
             border-radius: 6px;
             font-family: 'Impact';
             font-size: 16px;
-            margin-top: 5px;
+            margin-top: 4px;
         }
 
 
         input[type="submit"]{
             width: 190px;
-            margin-top: 4em;
+            margin-top: 0.5em;
             margin-left: 25%;
             background-color: #073B4C;
             color: wheat;

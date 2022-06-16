@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'accueil</title>
+    <title>Page de connection</title>
+    <link rel="icon" href="/assets/icons/LBS-removebg-preview.png">
     <link rel="stylesheet" href="style.css">
 
     <!-- Needs to be on all pages -->
 	<script src="/scripts/ajaxRequest.js"></script>
     <script src="/scripts/isConnected.js"></script>
+    <script src="/scripts/script.js" defer></script>
+
 
 
 </head>
 <body>
     <div class="menu-header">
       
-        <img src="/assets/icons/profile.png" class="imgheader">
-        <img src="/assets/icons/calendar.png" class="imgheader">
-        <img src="/assets/icons/list.png" class="imgheader">
-        <img src="/assets/icons/sport.png" class="imgheader" >
+        <img src="/assets/icons/profile.png" id="logo1" class="imgheader cursor" onmouseover="logomouseenter('logo1')" onmouseleave="logomouseleave('logo1')">
+        <img src="/assets/icons/calendar.png" id="logo2" class="imgheader cursor" onmouseover="logomouseenter('logo2')" onmouseleave="logomouseleave('logo2')">
+        <img src="/assets/icons/list.png" id="logo3" class="imgheader cursor" onmouseover="logomouseenter('logo3')" onmouseleave="logomouseleave('logo3')">
+        <img src="/assets/icons/sport.png" id="logo4" class="imgheader cursor" onmouseover="logomouseenter('logo4')" onmouseleave="logomouseleave('logo4')">
        <div class="pagetitle">Lebonsport</div>
     </div>
     <div class="body-body">
@@ -33,7 +36,7 @@
                     <label for="psw">mot de passe</label>
                     <input type="password" name="password" placeholder="password">
 
-                    <input type="submit" id="submit" value="Se Connecter">
+                    <input class="cursor" type="submit" id="submit" value="Se Connecter">
                 </fieldset></form>
                 <a href="account_creation.html"><p><u>Pas encore inscrit ?</u></p></a> 
             </div>

@@ -5,30 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page d'accueil</title>
+    <link rel="icon" href="/assets/icons/LBS-removebg-preview.png">
     <link rel="stylesheet" href="style.css">
 
     <!-- Needs to be on all pages -->
-	<script src="/scripts/ajaxRequest.js"></script>
-    <script src="/scripts/isConnected.js"></script>
-
+	<script src="/scripts/ajaxRequest.js" defer></script>
+    <script src="/scripts/isConnected.js" defer></script>
+    <script src="/scripts/script.js" defer></script>
 
 </head>
 <body>
     <div class="menu-header">
-      
-        <img src="/assets/icons/profile.png" class="imgheader">
-        <img src="/assets/icons/calendar.png" class="imgheader">
-        <img src="/assets/icons/list.png" class="imgheader">
-        <img src="/assets/icons/sport.png" class="imgheader">
+        <img src="/assets/icons/profile.png" id="logo1" class="imgheader cursor" onmouseover="logomouseenter('logo1')" onmouseleave="logomouseleave('logo1')">
+        <img src="/assets/icons/calendar.png" id="logo2" class="imgheader cursor" onmouseover="logomouseenter('logo2')" onmouseleave="logomouseleave('logo2')">
+        <img src="/assets/icons/list.png" id="logo3" class="imgheader cursor" onmouseover="logomouseenter('logo3')" onmouseleave="logomouseleave('logo3')">
+        <img src="/assets/icons/sport.png" id="logo4" class="imgheader cursor" onmouseover="logomouseenter('logo4')" onmouseleave="logomouseleave('logo4')">
        <div class="pagetitle">Lebonsport</div>
     </div>
     <div class="body-body">
-    <div id="rect1">
-        <div class="liketext" id="rect1text">Evenement</div>
+        <div class="cursor" id="rect1" onmouseenter="indexmouseenter('rect1')" onmouseleave="indexmouseleave('rect1')">
+            <div class="liketext" id="recttext" style="font-family:'Impact';">&Eacutevènements</div>
+            <img src="/assets/icons/sport.png" id="rectimg">
+        </div>
+    <div class="cursor" id="rect2" onmouseenter="indexmouseenter('rect2')" onmouseleave="indexmouseleave('rect2')">
+        <div class="liketext" id="recttext" style="font-family:'Impact';">Organiser un évènement</div>
+            <img src="/assets/icons/list.png" id="rectimg">
     </div>
-    <div id="rect2"></div>
-    <div id="rect3"></div>
-    <div id="rect4"></div>
+    <div class="cursor" id="rect3" onmouseenter="indexmouseenter('rect3')" onmouseleave="indexmouseleave('rect3')">
+        <div class="liketext" id="recttext" style="font-family:'Impact';">Profil</div>
+        <img src="/assets/icons/profile.png" id="rectimg">
+    </div>
+    <div class="cursor" id="rect4" onmouseenter="indexmouseenter('rect4')" onmouseleave="indexmouseleave('rect4')">
+        <div class="liketext" id="recttext" style="font-family:'Impact';">Mes Matchs à Venir</div>
+            <img src="/assets/icons/calendar.png" id="rectimg">
+    </div>
 
     </div>
     <div class="footer">
