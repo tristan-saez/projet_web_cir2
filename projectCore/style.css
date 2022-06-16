@@ -1,14 +1,9 @@
-    body{
-        /* Index */
-    padding: 0px;
-    margin: 0px;
-    position: relative;
-    background: #FFFFFF;
-    }
+ 
 
 
+/* HEADER RELATED CONTENT */
 
-.menu-header{/* Rectangle 1 */
+.menu-header{
     position: fixed;
     width: 100%;
     height: 80px;
@@ -18,30 +13,30 @@
     background: #073B4C;
     }
 
-
-.body-body{
-    position: relative;
-    width: 100%;
-    height: 880px;
-    margin-top: 5%;}
-
-#mainbackground{
-    opacity: 20%;
-    height: 100%;
-    width: 86%;
-    margin-left: 7%;
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-}
-
+    .pagetitle{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        margin-left: 40%;
+        top: 10px;
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 69px;
+        text-align: center;
+        color: #000000;
+        user-select: none;
+    }   
 
 .menuicon1{
     position: relative;
     width: 52px;
     height: 55px;
-    left: 75%;
-    top: 18px;
+/*     left: 75%;
+    top: 18px; */
+    margin-left: 80%;
+    margin-top: 17px;
     background: url("/assets/icons/sport.png");
     background-repeat: no-repeat;
     background-size:47px;
@@ -51,8 +46,10 @@
     position: relative;
     width: 52px;
     height: 55px;
-    left: 79%;
-    top: 18px;
+   /*  left: 79%;
+    top: 18px; */
+    margin-left: 2%;
+    margin-top: 17px;
     background: url("/assets/icons/list.png");
     background-repeat: no-repeat;
     background-size:47px;
@@ -62,8 +59,10 @@
     position: relative;
     width: 52px;
     height: 55px;
-    left: 83%;
-    top: 18px;
+ /*    left: 83%;
+    top: 18px; */
+    margin-left: 2%;
+    margin-top: 17px;
     background: url("/assets/icons/calendar.png");
     background-repeat: no-repeat;
     background-size:47px;}
@@ -72,59 +71,69 @@
     position: relative;
     width: 52px;
     height: 55px;
-    left: 87%;
-    top: 18px; 
+ /*    left: 87%;
+    top: 18px;  */
+    margin-left: 2%;
+    margin-right: 5%;
+    margin-top: 17px;
     background: url("/assets/icons/profile.png");
     background-repeat: no-repeat;
     background-size:47px;
 }
 
-.pagetitle{
-    position: absolute;
-    width: 359px;
-    height: 50px;
-    margin-left: 40%;
-    top: 10px;
-    font-family: 'Jost';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 69px;
-    text-align: center;
-    color: #000000;
-    user-select: none;
+
+
+/* BODY RELATED CONTENT  */
+
+body{
+padding: 0px;
+margin: 0px;
+position: relative;
+background: #FFFFFF;
+background-image: url("/assets/icons/imagebackground.png");
+background-repeat:repeat;
+min-height: 500px;
 }
 
+
+.body-body{
+position: absolute;
+width: 100%;
+height: 920px;
+margin-top: 4%;
+margin-bottom: 4%;
+/* background-color: red;
+ */}
+
+
+
+/* FOOTER RELATED CONTENT */
 
 .footer{
     position:fixed;
     width: 100%;
-    height: 5%;
+    height: 50px;
+    bottom: 0px;
     left: 0px;
-    top: 95%;
     background: #073B4C;
 }   
 
-
-
-.copyrightlogo{
-    position:fixed;
-    width: 20px;
-    height: 20px;
-    left: 47%;
-    bottom: 15px;
-    background: url("assets/icons/copyrights.png");
-    background-repeat: no-repeat;
-    background-size:20px;
+#flexboxfooter{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    bottom: 13px;
+    left: 48.1%;
 }
 
 
+#copyrights{
+    width: 20px;
+    user-select: none;
+
+}
+
 .copyrighttext{
-    position:fixed;
-    width: 35px;
-    height: 35px;
-    left: 48.2%;
-    bottom: 3px;
-    font-size: 21px;
-    user-select: none
+    font-size: 18px;
+    user-select: none;
 }
