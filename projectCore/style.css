@@ -112,8 +112,11 @@ border-radius: 10px;
 position: absolute;
 width: 23%;
 height: 248px;
-left: 280px;
-top: 541px;
+/* left: 280px;
+top: 541px; */
+
+margin-left: 23%;
+margin-top: 28%;
 
 background: #118AB2;
 opacity: 0.8;
