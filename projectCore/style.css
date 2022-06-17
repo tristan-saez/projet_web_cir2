@@ -288,7 +288,7 @@ border-radius: 10px;
             border: solid 1px #aaa;
         }
 
-        input[type="email"], input[type="password"], input[type="text"],input[type="date"],input[type="file"]{
+        input[type="mail"], input[type="password"], input[type="text"],input[type="date"],input[type="file"]{
             width: 23em;
             border-radius: 6px;
             font-family: 'Impact';
@@ -320,7 +320,7 @@ border-radius: 10px;
                 /* PROFIL */
 
         #profilboxfeature{
-            width: 1300px;
+            width: 1200px;
             height: 680px;
         }
 
@@ -337,6 +337,7 @@ border-radius: 10px;
 
          #profilflexbox{
             display: flex;
+            margin-top: 1%;
         }
 
 
@@ -396,14 +397,22 @@ border-radius: 10px;
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            
-            margin-left: 0.5%;
-            margin-top: 5%;
+            margin-left: 0.2%;
+            margin-top: 4%;
             margin-right: 2%;
-            width: 100%;
         }
 
 
+        input[type="submit"], #matchsubmit{
+            width: 190px;
+            margin-top: 0.5em;
+            margin-left: 38%;
+            background-color: #073B4C;
+            color: wheat;
+            border-radius: 6px;
+            font-family: 'Impact';
+            font-size: 1em;
+        }
 
 /* FOOTER RELATED CONTENT */
 
