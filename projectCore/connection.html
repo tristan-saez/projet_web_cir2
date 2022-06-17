@@ -28,15 +28,16 @@
         <div id="connexionmainbox">
             <div id="connexiontitle">Connectez-vous !</div>
             <div id="connexionform">
-                <form action="#" method="post">
+                <form action="#" method="post" id="connection_form">
                     <fieldset>
-                    <label for="email">mail de connexion</label>
-                    <input type="email" name="email" placeholder="example@mail.com">
-                    <label for="psw">mot de passe</label>
-                    <input type="password" name="password" placeholder="password">
+                    <label for="mail">mail de connexion</label>
+                    <input type="mail" name="mail" id="mail" placeholder="example@mail.com">
+                    <label for="pwd">mot de passe</label>
+                    <input type="password" name="password" id="password" placeholder="password">
 
                     <input class="cursor" type="submit" id="submit" value="Se Connecter">
-                </fieldset></form>
+                    </fieldset>
+                </form>
                 <a href="account_creation.html"><p><u>Pas encore inscrit ?</u></p></a> 
             </div>
 

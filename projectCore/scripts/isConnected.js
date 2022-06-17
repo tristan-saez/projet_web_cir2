@@ -19,6 +19,7 @@ function CheckConnection() {
 
 function redirectToConnect(isconnected) {
     if(!isconnected) {
+        console.log("not connected : redirecting...");
         window.location.replace("connection.html");
     }
 }

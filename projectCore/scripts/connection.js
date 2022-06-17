@@ -27,7 +27,7 @@ function redirectAfterConnection(result) {
     }
 }
 
-let email = document.getElementById('email');
+let mail = document.getElementById('mail');
 let password = document.getElementById('password');
 
 $('#connection_form').submit((event) => {

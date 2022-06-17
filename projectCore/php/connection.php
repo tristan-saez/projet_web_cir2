@@ -2,7 +2,6 @@
     session_start();
     // Check the request.
     require_once('database.php');
-    require_once('hash.php');
 
     // Database connexion.
     $db = dbConnect();

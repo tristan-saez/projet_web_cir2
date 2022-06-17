@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Needs to be on all pages -->
-	<script src="/scripts/ajaxRequest.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="/scripts/ajaxRequest.js"></script>
+    <script src="/scripts/inscription.js" defer></script>
 
 </head>
 <body>
@@ -28,23 +29,23 @@
         <div id="connexionmainbox">
             <div id="connexiontitle">Inscrivez-vous !</div>
             <div id="connexionform">
-                <form action="#" method="post">
+                <form id="inscription_form">
                     <fieldset>
                     <label for="firstname">Prenom</label>
-                    <input type="text" name="firstname" placeholder="first name" required>
+                    <input id="firstname" type="text" name="firstname" placeholder="first name" required>
                     <label for="lastname">Nom</label>
-                    <input type="text" name="lastname" placeholder="last name" required>
-                    <label for="email">mail</label>
-                    <input type="email" name="email" placeholder="example@mail.com" required>
+                    <input id="lastname" type="text" name="lastname" placeholder="last name" required>
+                    <label for="mail">mail</label>
+                    <input id="mail" type="mail" name="mail" placeholder="example@mail.com" required>
                     <label for="birthdate">Date de naissance</label>
-                    <input type="date" name="birthdate" placeholder="birthdate" required>
+                    <input id="birthdate" type="date" name="birthdate" placeholder="birthdate" required>
                     <label for="ville">Ville</label>
-                    <input type="text" name="city" placeholder="Ville" required>
+                    <input id="city" type="text" name="city" placeholder="Ville" required>
                     <label for="psw">mot de passe</label>
-                    <input type="password" name="password" placeholder="password" required>
-                    <input type="password" name="password" placeholder="password confirmation" required>
+                    <input id="password" type="password" name="password" placeholder="password" required>
+                    <input id="password_confirmation" type="password" name="password" placeholder="password confirmation" required>
                     <label for="picture">Photo</label>
-                    <input type="file" placeholder="picture" class="cursor">
+                    <input id="picture" type="file" placeholder="picture" class="cursor">
                     <input class="cursor" type="submit" id="submit" value="S'inscrire">
                 </fieldset></form>
             </div>
