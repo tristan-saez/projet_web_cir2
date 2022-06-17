@@ -1,24 +1,9 @@
+
 /* 
-function indexmouseenter(id){
-    document.getElementById(id).style.opacity = 1;
-}
+MODIFIER LES ID ET LES CLASS DU FIST NAME DANS LE PROFIL CAR IL Y A 2 IDs
+BON LUNDI A TOI DE VENDREDI DERNIER 
 
-function indexmouseleave(id){
-    document.getElementById(id).style.opacity = 0.8;
-}
-
-function logomouseenter(id){
-    document.getElementById(id).style.backgroundColor = 'rgba(7, 59, 76, 0.3)';
-    document.getElementById(id).style.borderRadius = '10px';
-}
-
-
-function logomouseleave(id){
-    document.getElementById(id).style.backgroundColor = 'rgba(7, 59, 76, 0)';
-
-} */
-
-
+*/
 var test = 2;
 var varsportchange;
 varsportchange = 2;
