@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="icon" href="/assets/icons/LBS-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Needs to be on all pages -->
+	<script src="/scripts/ajaxRequest.js"></script>
+    <script src="/scripts/isConnected.js"></script>
+    <script src="/scripts/script.js" defer></script>
+
+
+
+</head>
+<body>
+    <div class="menu-header">
+      
+        <img src="/assets/icons/profile.png" id="logo1" class="imgheader cursor" onmouseover="logomouseenter('logo1')" onmouseleave="logomouseleave('logo1')">
+        <img src="/assets/icons/calendar.png" id="logo2" class="imgheader cursor" onmouseover="logomouseenter('logo2')" onmouseleave="logomouseleave('logo2')">
+        <img src="/assets/icons/list.png" id="logo3" class="imgheader cursor" onmouseover="logomouseenter('logo3')" onmouseleave="logomouseleave('logo3')">
+        <img src="/assets/icons/sport.png" id="logo4" class="imgheader cursor" onmouseover="logomouseenter('logo4')" onmouseleave="logomouseleave('logo4')">
+       <div class="pagetitle">Lebonsport</div>
+       <img src="/assets/icons/LBS-removebg-preview.png" class="imgheader" id="logo5">
+
+    </div>
+    <div class="body-body">
+        <div id="connexionmainbox">
+            <div id="connexiontitle">Profil de </div><div id="firstname"></div><div></div>
+            <div id="connexionform">
+                <form action="#" method="post">
+                    <fieldset>
+                    <label for="email">mail de connexion</label>
+                    <input type="email" name="email" placeholder="example@mail.com">
+                    <label for="psw">mot de passe</label>
+                    <input type="password" name="password" placeholder="password">
+
+                    <input class="cursor" type="submit" id="submit" value="Se Connecter">
+                </fieldset></form>
+                <a href="account_creation.html"><p><u>Pas encore inscrit ?</u></p></a> 
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div id="flexboxfooter">
+        
+        <div>
+        </div>
+        <div class="copyrighttext">&copytristan&antonin</div>
+        </div>
+    </div>
+    
+</body>
+</html>
