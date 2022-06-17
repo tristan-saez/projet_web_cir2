@@ -13,36 +13,38 @@
     <script src="/scripts/isConnected.js"></script>
     <script src="/scripts/script.js" defer></script>
 
-
-
 </head>
 <body>
     <div class="menu-header">
-      
-        <img src="/assets/icons/profile.png" id="logo1" class="imgheader cursor" onmouseover="logomouseenter('logo1')" onmouseleave="logomouseleave('logo1')">
-        <img src="/assets/icons/calendar.png" id="logo2" class="imgheader cursor" onmouseover="logomouseenter('logo2')" onmouseleave="logomouseleave('logo2')">
-        <img src="/assets/icons/list.png" id="logo3" class="imgheader cursor" onmouseover="logomouseenter('logo3')" onmouseleave="logomouseleave('logo3')">
-        <img src="/assets/icons/sport.png" id="logo4" class="imgheader cursor" onmouseover="logomouseenter('logo4')" onmouseleave="logomouseleave('logo4')">
-       <div class="pagetitle">Lebonsport</div>
+        <img src="/assets/icons/profile.png" id="logo1" class="imgheader cursor">
+        <img src="/assets/icons/calendar.png" id="logo2" class="imgheader cursor" >
+        <img src="/assets/icons/list.png" id="logo3" class="imgheader cursor" >
+        <img src="/assets/icons/sport.png" id="logo4" class="imgheader cursor">
+       <div class="pagetitle"><a href="/index.html">Lebonsport</a></div>
        <img src="/assets/icons/LBS-removebg-preview.png" class="imgheader" id="logo5">
 
     </div>
     <div class="body-body">
-        <div id="connexionmainbox">
-            <div id="connexiontitle">Profil de </div><div id="firstname"></div><div></div>
-            <div id="connexionform">
-                <form action="#" method="post">
-                    <fieldset>
-                    <label for="email">mail de connexion</label>
-                    <input type="email" name="email" placeholder="example@mail.com">
-                    <label for="psw">mot de passe</label>
-                    <input type="password" name="password" placeholder="password">
-
-                    <input class="cursor" type="submit" id="submit" value="Se Connecter">
-                </fieldset></form>
-                <a href="account_creation.html"><p><u>Pas encore inscrit ?</u></p></a> 
-            </div>
-
+        <div class="connexionmainbox" id="profilboxfeature" >
+            <fieldset class="profilbox">
+            <legend class="fieldsettitle">Profil de <span id="firstname">Tuant
+            </span> <span id="lastname">Nheimar</span></legend>
+                <div id="profilflexbox">
+                    <img src="/assets/images/defaultimage.png" id="profilimage"  class="borderselection" onclick="picturechange()">  
+                    <div id="profilinformations" class="borderselection">
+                        <div id="informationtext">
+                        <div><b>NOM :</b><span id="lastname"></span></div>
+                        <div><b>PRENOM :</b><span id="firstname"></span></div>
+                        <div><b>EMAIL :</b><span id="email"></span></div>
+                        <div><b>AGE :</b><span id="age"></span></div>
+                        <div><b>VILLE :</b><span id="city"></span></div>
+                        <div><b>NOMBRE DE PARTIES JOU&EacuteES :</b><span id="gameplayed"></span></div>
+                        <div><b>NOTE :</b><span id="websiterating"></span></div>
+                        <div><b>FORME PHYSIQUE:</b><span id="physicalshape"></span></div>
+                        </div>
+                    </div>
+                </div>
+        </fieldset>
         </div>
     </div>
     <div class="footer">

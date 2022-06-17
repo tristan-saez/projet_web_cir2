@@ -3,6 +3,12 @@
     font-family: 'Impact';
 }
 
+
+a{
+    color:#073B4C;
+   text-decoration: none; 
+   background-color: none;
+}
 /* HEADER RELATED CONTENT */
 
 .menu-header{
@@ -205,13 +211,12 @@ border-radius: 10px;
 
                 /* CONNEXION PAGE */
 
-        #connexionmainbox{
+        .connexionmainbox{
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 600px;
-            height: 780px;
+            
             border: solid;
             background-color: white;
             border-radius: 7px;
@@ -220,6 +225,16 @@ border-radius: 10px;
 /*             background: rgba(7, 59, 76, 0.7);
  */
             box-shadow: 5px 5px  rgba(7, 59, 76, 0.7);
+       }
+
+        #connectionboxfeature{
+            width: 600px;
+            height: 780px;
+        }
+
+        #inscriptionboxfeature{
+            width: 600px;
+            height: 780px;
         }
 
         #connexiontitle{
@@ -301,6 +316,98 @@ border-radius: 10px;
         }
 
 
+
+                /* PROFIL */
+
+        #profilboxfeature{
+            width: 1300px;
+            height: 680px;
+        }
+
+      
+        .profilbox{
+            border-color: rgb(110, 97, 99);
+            width: 90%;
+            height: 80%;
+            margin-left: 2.5%;
+            border-width: 3px;
+            
+         
+        }
+
+         #profilflexbox{
+            display: flex;
+        }
+
+
+        .fieldsettitle{
+            font-size: 3em;
+            color: #073B4C;
+            user-select: none;
+
+        }
+
+        #profilimage{
+            margin-top: 5%;
+            width: 30%;
+            height: 70%;
+            margin-left: 2%;
+
+        }
+
+        #profilinformations{
+            height: 440px;
+            width: 80%;
+            margin-top: 20px;
+            user-select: none;
+
+        }
+        
+        .borderselection{
+            border: solid;
+            border-radius: 50px;
+            border-color: #073B4C;
+            margin-right: 10px;
+        }
+
+        #informationtext{
+            font-size: 1.5em;
+            margin-top: 3%;
+            margin-left: 15%;
+            display: flex;
+            flex-direction: column;
+            color: #073B4C;
+            line-height: 2em;
+        }
+       
+
+
+
+                /* ORGANIZE PAGE */
+
+
+        #sportimage{
+            height: 300px;
+            width: 300px;
+            margin-top: 10%;
+        }
+
+        #organizeflexbox{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-left: 2%;
+            margin-top: 3%;
+            margin-right: 2%;
+        }
+
+
+        .oragnisetextbox{
+            height: 580px;
+            width: 80%;
+            margin-top: 20px;
+            user-select: none;
+        }
 /* FOOTER RELATED CONTENT */
 
 .footer{

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organiser</title>
+    <link rel="icon" href="/assets/icons/LBS-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Needs to be on all pages -->
+	<script src="/scripts/ajaxRequest.js"></script>
+    <script src="/scripts/isConnected.js"></script>
+    <script src="/scripts/script.js" defer></script>
+
+
+
+</head>
+<body>
+    <div class="menu-header">
+      
+        <img src="/assets/icons/profile.png" id="logo1" class="imgheader cursor">
+        <img src="/assets/icons/calendar.png" id="logo2" class="imgheader cursor" >
+        <img src="/assets/icons/list.png" id="logo3" class="imgheader cursor" >
+        <img src="/assets/icons/sport.png" id="logo4" class="imgheader cursor">
+       <div class="pagetitle"><a href="/index.html">Lebonsport</a></div>
+       <img src="/assets/icons/LBS-removebg-preview.png" class="imgheader" id="logo5">
+
+    </div>
+    <div class="body-body">
+        <div class="connexionmainbox" id="profilboxfeature" >
+            <fieldset class="profilbox">
+            <legend class="fieldsettitle">Créer Un Nouveau Match</legend>
+                <div id="profilflexbox">
+                    <img src="/assets/sports/soccer.png" id="sportimage" class="borderselection" onclick="sportchange()">
+                    <div class="borderselection oragnisetextbox">
+                        <form action="#" method="post">
+                            <div id="organizeflexbox">
+                                    <label for="sportselectionlabel">Choix du sport </label>
+                                     <select name = "sportselection" id="sportselection" onchange="sportchange(value)">
+                                        <option value="soccer">Foot</option>
+                                        <option value="basket">Basket</option>
+                                        <option value="football">Rugby</option>
+                                        <option value ="swimming">Natation</option>
+                                        <option value="Baseball">Baseball</option>
+                                        <option value="goodminton">Badminton</option>
+                                        <option value="tennis">Tennis</option>
+                                        <option value="other">Autre</option>
+                                    </select>
+                                        <table>
+                                        <td>
+
+                                            <label for="eventname">Nom de l'évènement</label>
+                                            <input type="text" name="eventname" id="eventname" placeholder="évènement" required>
+                                        </td>
+                                        <td>
+                                            <label for="eventdate">Date de l'évènement</label>
+                                            <input type="date" name="eventdate" id="eventdate" placeholder="date" required>
+                                        </td>
+                                    </table>
+                                     <label for="eventduration">durée de l'évènement</label>
+                                     <input type="time" name="eventduration" id="eventduration" placeholder="durée" required>
+                                <label for="playernumber">Nombre de joueurs</label>
+                                <input type="number" name="playernumber" id="playernumber" placeholder="nb de joueurs" required>
+                                <table>
+                                    <tr><td>
+
+                                        <label for="eventplace">Ville</label>
+                                        <input type="text" name="eventplace" id="eventplace" placeholder="Ville" required>
+                                    </td>
+                                    <td>
+                                        <label for="eventadress">Adresse</label>
+                                        <input type="text" name="eventadress" id="eventadress" placeholder="adresse" required>
+                                    </td></tr>
+                                    <tr>
+                                        <input class="cursor" type="submit" id="match   submit" value="Créer Un Match">
+                                    </tr>
+                                </table>
+                            </div>
+                            </form>
+                        </div>
+                </div>
+        </fieldset>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="flexboxfooter">
+        
+        <div>
+        </div>
+        <div class="copyrighttext">&copytristan&antonin</div>
+        </div>
+    </div>
+    
+</body>
+</html>
