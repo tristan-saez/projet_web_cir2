@@ -9,17 +9,13 @@
 'use strict';
 
 //------------------------------------------------------------------------------
-//--- accountConnection -----------------------------------------------------------
+//--- redirectAfterConnection --------------------------------------------------
 //------------------------------------------------------------------------------
-// connect to an account with datas
-function accountConnection(username, password) {
-    ajaxRequest('POST', 'php/connection.php/account-connect');
-}
-
+// redirect after the connection
 function redirectAfterConnection(result) {
     if(result == "success") {
         window.location.replace("index.html");
-    } else if(result == "username") {
+    } else if(result == "mail") {
         window.location.replace("connection.html");
         alert("Utilisateur inconnu");
     } else if(result == "password") {
@@ -30,3 +26,11 @@ function redirectAfterConnection(result) {
         alert("Une erreur est survenue veuilez reéssayer");
     }
 }
+
+let email = document.getElementById('email');
+let password = document.getElementById('password');
+
+$('#connection_form').submit((event) => {
+    event.preventDefault();
+    ajaxRequest('POST', 'php/connection.php/account-connect', redirectAfterConnection, "mail="+mail.value+"&password="+password.value);
+});

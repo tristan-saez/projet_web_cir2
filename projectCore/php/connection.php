@@ -19,17 +19,38 @@
 
     // Check if an user is connected
     if($requestMethod == 'GET' && $requestRessource == 'check-connection') {
-        if(isset($_SESSION['connected'])) {
-            $data = $_SESSION['connected'];
-        } elseif(!isset($_SESSION['connected'])) {
+        if(isset($_SESSION['mail'])) {
+            $data = $_SESSION['mail'];
+        } elseif(!isset($_SESSION['mail'])) {
             $data = 0;
         }
     }
 
     //connect user
     if($requestMethod == 'POST' && $requestRessource == 'account-connect') {
-        $hashed_pwd = hashing_pwd($_POST['password']);
-        
+        $request = "SELECT password FROM profile ";
+        if($_POST['mail'] != '') {
+            $request .= "WHERE mail=:mail";
+            $query = $db->prepare($request);
+            $query->bindParam(':mail', $_POST['mail'], PDO::PARAM_STR, 100);
+            $query->execute();
+            $results = $query->fetchAll();
+
+
+            if($results) {
+                $pass = password_verify($_POST['password'],$results[0]['password']);
+                if($pass) {
+                    $data = "success";
+                    $_SESSION['mail'] = $_POST['mail'];
+                } else {
+                    $data = "password";
+                }
+            } else {
+                $data = "mail";
+            }
+        } else {
+            $data = "mail";
+        }
     }
 
     // Send data to the client.
