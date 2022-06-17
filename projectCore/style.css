@@ -387,27 +387,24 @@ border-radius: 10px;
 
 
         #sportimage{
-            height: 300px;
-            width: 300px;
-            margin-top: 10%;
+            height: 280px;
+            width: 280px;
+            margin-top: 6%;
         }
 
         #organizeflexbox{
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            margin-left: 2%;
-            margin-top: 3%;
+            
+            margin-left: 0.5%;
+            margin-top: 5%;
             margin-right: 2%;
+            width: 100%;
         }
 
 
-        .oragnisetextbox{
-            height: 580px;
-            width: 80%;
-            margin-top: 20px;
-            user-select: none;
-        }
+
 /* FOOTER RELATED CONTENT */
 
 .footer{
