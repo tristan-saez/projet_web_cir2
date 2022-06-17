@@ -116,7 +116,7 @@ text-align: center;
 color: #000000;
 }
 
-#rectimg{
+.rectimg{
     width: 70px;
     margin-left: 43%;
 }
@@ -191,6 +191,17 @@ border: 2px solid #000000;
 box-shadow: 3px 6px 4px 3px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
 }
+
+#rect1:hover, #rect2:hover, #rect3:hover, #rect4:hover{
+    opacity: 1;
+    transition: 0.5s;
+} 
+.cursor:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+
 
                 /* CONNEXION PAGE */
 
