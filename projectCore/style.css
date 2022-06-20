@@ -8,6 +8,7 @@ a{
     color:#073B4C;
    text-decoration: none; 
    background-color: none;
+   margin-right: 2.5%;
 }
 
 
@@ -387,7 +388,16 @@ border-radius: 10px;
        
 
 
+        .ratingimg{
+            height: 30px;
+            width: 30px;
+        }
 
+
+        .ratingdiv{
+            display: flex;
+            flex-direction: row;
+        }
                 /* ORGANIZE PAGE */
 
 
@@ -448,7 +458,7 @@ border-radius: 10px;
 
         .eventpageselection{
             height: 150px;
-            width: 1370px;
+            width: 124%;
             margin-top: 1%;
             display: flex;
             flex-direction: row;
