@@ -45,8 +45,8 @@
                                         <option value="tennis">Tennis</option>
                                         <option value="other">Autre</option>
                                     </select>
-                                        <table>
-                                        <td>
+                                        <table style="display: inline-block;">
+                                        <tr><td>
 
                                             <label for="eventname">Nom de l'évènement</label>
                                             <input type="text" name="eventname" id="eventname" placeholder="évènement" required>
@@ -55,9 +55,19 @@
                                             <label for="eventdate">Date de l'évènement</label>
                                             <input type="date" name="eventdate" id="eventdate" placeholder="date" required>
                                         </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+
+                                                <label for="startingtime">Heure de début</label>
+                                                <input type="time" name="startingtime" id="startingtime" placeholder="Début" required>
+                                            </td><td>
+                                                <label for="eventduration">durée de l'évènement</label>
+                                                <input type="time" name="eventduration" id="eventduration" placeholder="durée" required>
+                                            </td>
+
+                                        </tr>
                                     </table>
-                                     <label for="eventduration">durée de l'évènement</label>
-                                     <input type="time" name="eventduration" id="eventduration" placeholder="durée" required>
                                      <label for="price">Prix</label>
                                      <input type="number" name="price" id="price" placeholder="$" required>
                                 <label for="playernumber">Nombre de joueurs</label>
