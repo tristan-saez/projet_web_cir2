@@ -34,9 +34,9 @@
                     <div>
 
                         <img src="/assets/images/defaultimage.png" id="profilimage"  class="borderselection" onclick="picturechange()">
-                        <div>
-                            <form action="#" method="post">
-                                <label for="physicalshapelabel">FORME PHYSIQUE :</label>
+                        <div style="display: flex;">
+                            <form action="#" method="post" style="margin-left:10%;">
+                                <label for="physicalshapelabel">Photo de Profil:</label>
                                 <select name ="physicalshape" id="physicalshape" onchange="profilchange(value)">
                                     <option value="PhysicalShapeA">Photo de profil 1</option>
                                     <option value="PhysicalShapeB">Photo de profil 2</option>
@@ -47,6 +47,7 @@
                                     <option value="PhysicalShapeG">Photo de profil 7</option>
                                 </select>
                             </form>
+                            <div><img src="/assets/icons/settings.png" style="height: 30px;margin-left: 160px;"></div>
                         </div>
                     </div>
                     <div id="profilinformations" class="borderselection">
