@@ -14,7 +14,6 @@
     <script src="/scripts/isConnected.js"></script>
     <script src="/scripts/profile.js" defer></script>
     <script src="/scripts/script.js" defer></script>
-
 </head>
 <body>
     <div class="menu-header">
@@ -32,7 +31,24 @@
             <legend class="fieldsettitle">Profil de <span id="firstname">Tuant
             </span> <span id="lastname">Nheimar</span></legend>
                 <div id="profilflexbox">
-                    <img src="/assets/images/defaultimage.png" id="profilimage"  class="borderselection" onclick="picturechange()">  
+                    <div>
+
+                        <img src="/assets/images/defaultimage.png" id="profilimage"  class="borderselection" onclick="picturechange()">
+                        <div>
+                            <form action="#" method="post">
+                                <label for="physicalshapelabel">FORME PHYSIQUE :</label>
+                                <select name ="physicalshape" id="physicalshape" onchange="profilchange(value)">
+                                    <option value="PhysicalShapeA">Photo de profil 1</option>
+                                    <option value="PhysicalShapeB">Photo de profil 2</option>
+                                    <option value="PhysicalShapeC">Photo de profil 3</option>
+                                    <option value="PhysicalShapeD">Photo de profil 4</option>
+                                    <option value="PhysicalShapeE">Photo de profil 5</option>
+                                    <option value="PhysicalShapeF">Photo de profil 6</option>
+                                    <option value="PhysicalShapeG">Photo de profil 7</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
                     <div id="profilinformations" class="borderselection">
                         <div id="informationtext">
                         <div><b>NOM :</b><span id="lastname"></span></div>
@@ -41,8 +57,19 @@
                         <div><b>AGE :</b><span id="age"></span></div>
                         <div><b>VILLE :</b><span id="city"></span></div>
                         <div><b>NOMBRE DE PARTIES JOU&EacuteES :</b><span id="gameplayed"></span></div>
-                        <div><b>NOTE :</b><span id="websiterating"></span></div>
-                        <div><b>FORME PHYSIQUE:</b><span id="physicalshape"></span></div>
+                        <form action="#" method="post">
+                            <label for="eventduration">NOTE :</label>
+                            <input type="number" name="websiterating" id="websiterating" placeholder="note entre 1 et 5">
+                                <label for="physicalshapelabel">FORME PHYSIQUE :</label>
+                                     <select name = "physicalshape" id="physicalshape">
+                                        <option value="PhysicalShapeA">Je soulève des voitures</option>
+                                        <option value="PhysicalShapeB">Je me debrouille pas trop mal</option>
+                                        <option value="PhysicalShapeC">J'ai une forme physique correcte</option>
+                                        <option value ="PhysicalShapeD">Je commence demain</option>
+                                        <option value="PhysicalShapeE">Je conduis la voiture</option>
+                                    </select>
+                        </form>
+                        
                         </div>
                     </div>
                 </div>
