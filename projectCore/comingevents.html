@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&Eacutev&egravenements</title>
+    <link rel="icon" href="/assets/icons/LBS-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Needs to be on all pages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+	<script src="/scripts/ajaxRequest.js"></script>
+    <script src="/scripts/isConnected.js"></script>
+    <script src="/scripts/profile.js" defer></script>
+    <script src="/scripts/script.js" defer></script>
+
+</head>
+<body>
+    <div class="menu-header">
+        <img src="/assets/icons/profile.png" id="logo1" class="imgheader cursor">
+        <img src="/assets/icons/calendar.png" id="logo2" class="imgheader cursor" >
+        <img src="/assets/icons/list.png" id="logo3" class="imgheader cursor" >
+        <img src="/assets/icons/sport.png" id="logo4" class="imgheader cursor">
+       <div class="pagetitle"><a href="/index.html">Lebonsport</a></div>
+       <img src="/assets/icons/LBS-removebg-preview.png" class="imgheader" id="logo5">
+
+    </div>
+
+    <div class="body-body">
+        <div class="connexionmainbox" id="eventboxfeature" >
+            <fieldset class="profilbox">
+            <legend class="fieldsettitle">Mes Matchs à Venir</legend>
+            <div class="borderselection" style="width:1370px;">
+                <div class="legende">
+                    <div>Sport</div>
+                    <div>&Eacutevènement</div>
+                    <div>Adresse de l'évènement - ville</div>
+                    <div>Date et heure de l'event </div>
+                    <div>participants/total</div>
+                    <div>details</div>
+
+
+                </div>
+            </div>  
+                <div id="eventsbox">  
+                    <div id="profilinformations"> <!--  /!\ class"borderselection -->
+                        
+                        <div id="matchstext">
+                        <div class="borderselection eventpageselection">
+                            <img  class="eventsporticon" src="/assets/sports/football.png">
+                            <div class="eventeventitle">Titre de l'event</div>
+                            <div class="eventnormaltext">Lieu de l'event - Ville</div>
+                            <div class="eventnormaltext">Date de l'event</div>
+                            <div class="eventnormaltext"><span class="nbjoueur">50</span>/<span class="nbplayer">200</span></div>
+                            <a><img  class="eventdetails" src="/assets/icons/details.png"></a>
+                        </div>
+                        <div class="borderselection eventpageselection">
+
+                        </div>
+                        <div class="borderselection eventpageselection">
+                            
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        </fieldset>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="flexboxfooter">
+        
+        <div>
+        </div>
+        <div class="copyrighttext">&copytristan&antonin</div>
+        </div>
+    </div>
+    
+</body>
+</html>
