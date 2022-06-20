@@ -425,15 +425,57 @@ border-radius: 10px;
         #eventsbox{
             overflow: scroll;
             border: pink;
-            
+            margin-top: 1%;
             border-width: 5px;
             border-radius: 20px;
+            height: 95%;
         }
 
-        
+        #eventboxfeature{
+            width: 80%;
+            height: 80%;
+        }
         #matchstext{
-           
-            color:#EF476F;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .legende{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .eventpageselection{
+            height: 150px;
+            width: 1370px;
+            margin-top: 1%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+        }
+
+        .eventsporticon{
+            width: 80px;
+            height: 80px;
+            margin-top: 3%;
+        }
+
+        .eventdetails{
+            height: 50x;
+            width: 50px;
+            margin-top: 60px;
+        }
+
+        .eventeventitle{
+            margin-top: 5%;
+            font-size: 1.8em;
+        }
+
+        .eventnormaltext{
+            margin-top: 5.5%;
+            font-size: 1.4em;
         }
 /* FOOTER RELATED CONTENT */
 
