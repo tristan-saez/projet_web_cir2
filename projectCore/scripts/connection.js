@@ -19,6 +19,7 @@ function redirectAfterConnection(result) {
         window.location.replace("connection.html");
         alert("Utilisateur inconnu");
     } else if(result == "password") {
+        temp_mail = document.getElementById("mail").value;
         window.location.replace("connection.html");
         alert("Mot de passe incorrect");
     } else if(result == "other") {

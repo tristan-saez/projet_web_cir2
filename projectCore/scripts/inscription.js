@@ -20,6 +20,10 @@ function redirectAfterInscription(result) {
     }
 }
 
+function isPictureAdded(result) {
+    console.log(result);
+}
+
 let firstname = document.getElementById('firstname');
 let lastname = document.getElementById('lastname');
 let mail = document.getElementById('mail');
@@ -27,9 +31,18 @@ let birthdate = document.getElementById('birthdate');
 let city = document.getElementById('city');
 let password = document.getElementById('password');
 let password_confirmation = document.getElementById('password_confirmation');
-let picture =  $("#picture")[0].files[0];
+let picture = document.getElementById("picture");
 
 let matching_passwords = false;
+
+// $('#picture').change(() => {
+//     const reader = new FileReader();
+//     reader.readAsDataURL(picture.files[0]);
+//     var data = reader.result
+
+//     console.log(data);  
+//     ajaxRequest('POST', 'php/inscription.php/upload-picture', isPictureAdded, data);
+// });
 
 $('#password_confirmation').keyup(() => {
     if(password.value == password_confirmation.value) {
@@ -43,8 +56,11 @@ $('#password_confirmation').keyup(() => {
 
 $('#inscription_form').submit((event) => {
     event.preventDefault();
+
+
     if(matching_passwords) {
-        console.log(firstname.value,"/",lastname.value,"/",mail.value,"/",birthdate.value,"/",city.value,"/",password.value,"/",picture);
+
+        console.log(firstname.value,"/",lastname.value,"/",mail.value,"/",birthdate.value,"/",city.value,"/",password.value,"/");
         ajaxRequest('POST', 'php/inscription.php/account-create', redirectAfterInscription, "firstname="+firstname.value+"&lastname="+lastname.value+"&mail="+mail.value+"&birthdate="+birthdate.value+"&city="+city.value+"&password="+password.value+"&picture="+null);
     } else {
         alert("Les mot de passe sont différents")

@@ -47,7 +47,7 @@
                                 </select>
                             </form>
                             <div><img src="/assets/icons/settings.png" style="height: 30px;margin-left: 120px;"></div>
-                            <div><img src="/assets/icons/deconnection.png" style="height: 30px; margin-left: 20px; "></div>
+                            <div id="disconnect" class="cursor"><img src="/assets/icons/deconnection.png" style="height: 30px; margin-left: 20px; "></div>
                         </div>
                     </div>
                     <div id="profilinformations" class="borderselection">
@@ -60,19 +60,19 @@
                         <div><b>NOMBRE DE PARTIES JOU&EacuteES :</b><span id="gameplayed"></span></div>
                         <div class="ratingdiv">
                             <div>NOTE :</div>
-                            <div onmouseover="rating(1)">
+                            <div onclick="updateRating(1)" class="cursor">
                                 <img class="ratingimg" id="star1" src="/assets/rating/star 1.png">
                             </div>
-                            <div onmouseover="rating(2)">
+                            <div onclick="updateRating(2)" class="cursor">
                                 <img class="ratingimg" id="star2" src="/assets/rating/star 1.png">
                             </div>
-                            <div onmouseover="rating(3)">
+                            <div onclick="updateRating(3)" class="cursor">
                                 <img class="ratingimg" id="star3" src="/assets/rating/star 1.png">
                             </div>
-                            <div onmouseover="rating(4)">
+                            <div onclick="updateRating(4)" class="cursor">
                                 <img  class="ratingimg" id="star4" src="/assets/rating/star 1.png">
                             </div>
-                            <div onmouseover="rating(5)">
+                            <div onclick="updateRating(5)" class="cursor">
                                 <img class="ratingimg" id="star5" src="/assets/rating/star 1.png">
                             </div>
                         </div>

@@ -52,6 +52,12 @@
         }
     }
 
+    //disconnect user
+    if($requestMethod == 'POST' && $requestRessource == 'account-disconnect') {
+        $data = "disconnected";
+        session_destroy();
+    }
+    
     // Send data to the client.
     header('Content-Type: application/json; charset=utf-8');
     header('Cache-control: no-store, no-cache, must-revalidate');
