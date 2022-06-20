@@ -428,7 +428,13 @@ border-radius: 10px;
             font-size: 1em;
         }
 
+        input[type="time"]{
+            width: 90%;
+        }
 
+        input{
+            width: 96%;
+        }
 
                 /* EVENTS PAGE */
 
