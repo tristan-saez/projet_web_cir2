@@ -35,7 +35,7 @@
             $results = $query->fetchAll();
 
             if($results) {
-                $eventplace = $results[0]['insee'];
+                $insee = $results[0]['insee'];
             } else {
                 $data = "eventplace";
             }
@@ -65,7 +65,7 @@
         if($_SESSION['mail'] != '') {$mail = $_SESSION['mail'];} else {$data = 'connection';}
 
         if($data = "good") {
-            $request_sql = "INSERT INTO match_event (date, start_hour, price, duration, name, address, nb_player, id_sports, mail) VALUES (:date, :start_hour, :price, :duration, :match_name, :address, :nb_player, :id_sports, :mail)";
+            $request_sql = "INSERT INTO match_event (date, start_hour, price, duration, name, address, nb_player, id_sports, mail, insee) VALUES (:date, :start_hour, :price, :duration, :match_name, :address, :nb_player, :id_sports, :mail, :insee)";
             $query = $db->prepare($request_sql);
             $query->execute(array(
                 ':date'=>$eventdate,
@@ -76,7 +76,8 @@
                 ':address'=>$eventaddress,
                 ':nb_player'=>$playernumber,    
                 ':id_sports'=>$id_sports,
-                ':mail'=>$mail
+                ':mail'=>$mail,
+                ':insee'=>$insee
             ));
 
             //$request_sql = "INSERT INTO a_lieu_a (id, insee) VALUES (:id, :insee)";
