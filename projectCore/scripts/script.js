@@ -96,31 +96,28 @@ function profilchange(profilpicture){
 
 function rating(shootingstar){
     //alert("oui");
+    //ratingreset()
+
 switch(shootingstar){
     case 1:
-        ratingreset()
         document.getElementById("star1").src = "/assets/rating/star.png";
     break;
     case 2:
-        ratingreset()
         document.getElementById("star1").src = "/assets/rating/star.png";
         document.getElementById("star2").src = "/assets/rating/star.png";
         break;
     case 3:
-        ratingreset()
         document.getElementById("star1").src = "/assets/rating/star.png";
         document.getElementById("star2").src = "/assets/rating/star.png";
         document.getElementById("star3").src = "/assets/rating/star.png";
         break;
     case 4:
-        ratingreset()
         document.getElementById("star1").src = "/assets/rating/star.png";
         document.getElementById("star2").src = "/assets/rating/star.png";
         document.getElementById("star3").src = "/assets/rating/star.png";
         document.getElementById("star4").src = "/assets/rating/star.png";
         break;
     case 5:
-        ratingreset()
         document.getElementById("star1").src = "/assets/rating/star.png";
         document.getElementById("star2").src = "/assets/rating/star.png";
         document.getElementById("star3").src = "/assets/rating/star.png";

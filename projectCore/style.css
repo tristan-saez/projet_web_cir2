@@ -365,7 +365,7 @@ border-radius: 10px;
 
         #profilinformations{
             height: 530px;
-            width: 80%;
+            width: 100%;
             margin-top: 20px;
             user-select: none;
 
@@ -450,6 +450,10 @@ border-radius: 10px;
         input{
             width: 96%;
         }
+
+
+    
+
 
                 /* EVENTS PAGE */
 
@@ -559,8 +563,8 @@ border-radius: 10px;
 
             
         .detailsprofil{
-            height: 150px;
-            width: 100%;
+            height: 125px;
+            width: 18.7%;
             margin-top: 1%;
         }
 
@@ -568,6 +572,7 @@ border-radius: 10px;
             user-select: none;
             display: flex;
             flex-wrap: wrap;
+            width: 100%;
         }
         
         #detailsbox::-webkit-scrollbar {
@@ -577,13 +582,21 @@ border-radius: 10px;
         #detailsbox{
             overflow: scroll;
             border: pink;
-            margin-top: 1%;
             border-width: 5px;
             border-radius: 20px;
-            height: 430px;
+            height: 434px;
         }
 
 
+        .detailprofil{
+            text-align: center;
+            margin-top: 2%;
+        }
+
+        .detailsimg{
+            height: 80px;
+            width: 80px;
+        }
 
 
 /* FOOTER RELATED CONTENT */
