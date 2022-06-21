@@ -24,10 +24,12 @@ function picturechange(){
 
 function sportchange(sport){
     //alert(sport)
+    document.getElementById("islessknownsport").style.display = "none";
     switch(sport){
         case "other": 
         document.getElementById("sportimage").src = "/assets/sports/default.png";
         varsportchange = 2;
+        document.getElementById("islessknownsport").style.display = "block";
         break;
         case "soccer": 
         document.getElementById("sportimage").src = "/assets/sports/soccer.png";
@@ -137,3 +139,4 @@ function ratingreset(){
         document.getElementById("star4").src = "/assets/rating/star 1.png";
         document.getElementById("star5").src = "/assets/rating/star 1.png";
 }
+

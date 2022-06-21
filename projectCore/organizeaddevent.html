@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un évènement</title>
+    <link rel="icon" href="/assets/icons/LBS-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Needs to be on all pages -->
+	<script src="/scripts/ajaxRequest.js"></script>
+    <script src="/scripts/isConnected.js"></script>
+    <script src="/scripts/script.js" defer></script>
+
+
+
+</head>
+<body>
+    <div class="menu-header">
+        <a href="/profil.html"><img src="/assets/icons/profile.png"  class="imgheader cursor"></a>
+        <a href="/comingevents.html"><img src="/assets/icons/calendar.png"  class="imgheader cursor"></a>
+        <a href="/organize.html"><img src="/assets/icons/list.png"  class="imgheader cursor"></a>
+        <a href="/events.html"><img src="/assets/icons/sport.png" class="imgheader cursor"></a>
+        <div class="pagetitle"><a href="/index.html">Lebonsport</a></div>
+        <a href="/index.html"><img src="/assets/icons/LBS-removebg-preview.png" class="imgheader" id="logo5"></a>
+    </div>
+    <div class="body-body">
+        <div class="connexionmainbox" id="profilboxfeature"  style="border-color:#FFD166 ;">
+            <fieldset class="profilbox">
+            <legend class="fieldsettitle" style="color: #FFD166;">Créer Un Nouveau Match</legend>
+                <div id="profilflexbox">
+                    <img src="/assets/sports/soccer.png" id="sportimage" class="borderselection" style="border-color:#FFD166 ;" onclick="sportchange()">
+                    <div class="borderselection profilinformations" style="border-color:#FFD166 ;">
+                        <form  id="event_form">
+                            <div id="organizeflexbox">
+                                    <label for="sportselectionlabel">Choix du sport </label>
+                                     <select name = "sportselection" id="sportselection" onchange="sportchange(value)">
+                                        <option value="soccer">Foot</option>
+                                        <option value="basket">Basket</option>
+                                        <option value="football">Rugby</option>
+                                        <option value ="swimming">Natation</option>
+                                        <option value="baseball">Baseball</option>
+                                        <option value="goodminton">Badminton</option>
+                                        <option value="tennis">Tennis</option>
+                                        <option value="other">Autre</option>
+                                    </select>
+                                        <div id="islessknownsport" style="display: none;">
+                                            <label for="sporttype">Sport :</label>
+                                            <input type="text" name="sporttype" id="sporttype" placeholder="sport" required>
+                                        </div>
+                                        <table style="display: inline-block;">
+                                        <tr><td>
+
+                                            <label for="eventname">Nom de l'évènement</label>
+                                            <input type="text" name="eventname" id="eventname" placeholder="évènement" required>
+                                        </td>
+                                        <td>
+                                            <label for="eventdate">Date de l'évènement</label>
+                                            <input type="date" name="eventdate" id="eventdate" placeholder="date" required>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+
+                                                <label for="startingtime">Heure de début</label>
+                                                <input type="time" name="startingtime" id="startingtime" placeholder="Début" required>
+                                            </td><td>
+                                                <label for="eventduration">durée de l'évènement</label>
+                                                <input type="time" name="eventduration" id="eventduration" placeholder="durée" required>
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                     <label for="price">Prix</label>
+                                     <input type="number" name="price" id="price" placeholder="$" required>
+                                <label for="playernumber">Nombre de joueurs</label>
+                                <input type="number" name="playernumber" id="playernumber" placeholder="nb de joueurs" required>
+                                <table>
+                                    <tr><td>
+
+                                        <label for="eventplace">Ville</label>
+                                        <input type="text" name="eventplace" id="eventplace" placeholder="Ville" required>
+                                    </td>
+                                    <td>
+                                        <label for="eventadress">Adresse</label>
+                                        <input type="text" name="eventadress" id="eventadress" placeholder="adresse" required>
+                                    </td></tr>
+                                </table>
+                                            <input class="cursor" type="submit" id="matchsubmit" value="Créer Un Match" style="margin-bottom: 2%;">
+                                </div>
+                            </form>
+                        </div>
+                </div>
+                <div class="borderselection addicon"><a href="/organize.html"><img class="iconaddicon cursor" src="/assets/icons/back.png"></a></div>
+
+        </fieldset>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="flexboxfooter">
+        
+        <div>
+        </div>
+        <div class="copyrighttext">&copytristan&antonin</div>
+        </div>
+    </div>
+    
+</body>
+</html>
