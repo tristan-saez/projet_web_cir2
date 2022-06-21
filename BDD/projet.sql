@@ -58,15 +58,17 @@ CREATE TABLE match_event(
         price      Float NOT NULL ,
         duration   Time NOT NULL ,
         score      Varchar (20) ,
-        name       Varchar (3) NOT NULL ,
+        name       Varchar (100) NOT NULL ,
         address    Varchar (200) NOT NULL ,
         nb_player  Int NOT NULL ,
         id_sports  Int NOT NULL ,
-        mail       Varchar (100) NOT NULL
+        mail       Varchar (100) NOT NULL ,
+        insee      Int NOT NULL
 	,CONSTRAINT match_event_PK PRIMARY KEY (id)
 
 	,CONSTRAINT match_event_sports_FK FOREIGN KEY (id_sports) REFERENCES sports(id)
 	,CONSTRAINT match_event_profile0_FK FOREIGN KEY (mail) REFERENCES profile(mail)
+	,CONSTRAINT match_event_city1_FK FOREIGN KEY (insee) REFERENCES city(insee)
 )ENGINE=InnoDB;
 
 
@@ -85,20 +87,15 @@ CREATE TABLE participe_a(
 	,CONSTRAINT participe_a_profile0_FK FOREIGN KEY (mail) REFERENCES profile(mail)
 )ENGINE=InnoDB;
 
-
-#------------------------------------------------------------
-# Table: a lieu à
-#------------------------------------------------------------
-
-CREATE TABLE a_lieu_a(
-        id    Int NOT NULL ,
-        insee Int NOT NULL
-	,CONSTRAINT a_lieu_a_PK PRIMARY KEY (id,insee)
-
-	,CONSTRAINT a_lieu_a_match_event_FK FOREIGN KEY (id) REFERENCES match_event(id)
-	,CONSTRAINT a_lieu_a_city0_FK FOREIGN KEY (insee) REFERENCES city(insee)
-)ENGINE=InnoDB;
-
 CREATE USER 'default_user'@'%' IDENTIFIED BY 'p@ss_conn3ction';
 GRANT ALL PRIVILEGES ON projet.* TO 'default_user'@'%';
 FLUSH PRIVILEGES;
+
+INSERT INTO sports (name, picture) VALUES ('soccer', "/assets/sports/soccer.png");
+INSERT INTO sports (name, picture) VALUES ('baseball', "/assets/sports/baseball.png");
+INSERT INTO sports (name, picture) VALUES ('basketball', "/assets/sports/basketball.png");
+INSERT INTO sports (name, picture) VALUES ('football', "/assets/sports/football.png");
+INSERT INTO sports (name, picture) VALUES ('badminton', "/assets/sports/goodminton.png");
+INSERT INTO sports (name, picture) VALUES ('swimming', "/assets/sports/swimming.png");
+INSERT INTO sports (name, picture) VALUES ('tennis', "/assets/sports/tennis.png");
+INSERT INTO sports (name, picture) VALUES ('default', "/assets/sports/default.png");
