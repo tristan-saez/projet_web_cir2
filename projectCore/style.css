@@ -401,6 +401,18 @@ border-radius: 10px;
                 /* ORGANIZE PAGE */
 
 
+        input[type="submit"]{
+            width: 220px;
+            margin-top: 0.5em;
+            margin-left: 4%;
+            background-color: #073B4C;
+            color: wheat;
+            border-radius: 6px;
+            font-family: 'Impact';
+            font-size: 1em;
+        }
+
+
         #sportimage{
             height: 280px;
             width: 280px;
@@ -417,8 +429,10 @@ border-radius: 10px;
         }
 
 
-        input[type="submit"], #matchsubmit{
-            width: 190px;
+        
+
+        #matchsubmit{
+            width: 220px;
             margin-top: 0.5em;
             margin-left: 38%;
             background-color: #073B4C;
@@ -427,7 +441,6 @@ border-radius: 10px;
             font-family: 'Impact';
             font-size: 1em;
         }
-
         input[type="time"]{
             width: 90%;
         }
@@ -522,12 +535,22 @@ border-radius: 10px;
             width: 50%;
             margin-left: 25%;
             font-size: 1.2em;
+            user-select: none;
+
         }
 
         .statborder{
             width: 100%;
             text-align: center;
         }
+
+        .stattext{
+            color: #073B4C;
+            font-size: 1.3em;
+        }
+
+
+        
 /* FOOTER RELATED CONTENT */
 
 .footer{

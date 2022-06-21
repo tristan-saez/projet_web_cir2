@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organisation</title>
+    <title>Détails</title>
     <link rel="icon" href="/assets/icons/LBS-removebg-preview.png">
     <link rel="stylesheet" href="style.css">
 
@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 	<script src="/scripts/ajaxRequest.js"></script>
     <script src="/scripts/isConnected.js"></script>
-    <script src="/scripts/matchCreatedList.js" defer></script>
+    <script src="/scripts/profile.js" defer></script>
     <script src="/scripts/script.js" defer></script>
 
 </head>
@@ -27,10 +27,10 @@
     </div>
 
     <div class="body-body">
-        <div class="connexionmainbox" id="eventboxfeature" style="border-color:#FFD166;">
+        <div class="connexionmainbox" id="eventboxfeature" style="border-color:#63C317;">
             <fieldset class="profilbox">
-            <legend class="fieldsettitle" style="color: #FFD166;">Mes Matchs Organisés sur Lebonsport</legend>
-            <div class="borderselection" style="width:100%;border-color: #FFD166;">
+            <legend class="fieldsettitle" style="color: #63C317;">Liste des Matchs sur Lebonsport</legend>
+            <div class="borderselection" style="width:100%;border-color: #63C317;">
                 <div class="legende">
                     <div></div>
                     <div>Sport</div>
@@ -39,7 +39,8 @@
                     <div>Date et heure de l'event </div>
                     <div>participants/total</div>
                     <div>details</div>
-                    <div>stats</div>
+
+
                 </div>
             </div>  
                 <div id="eventsbox">  
@@ -54,9 +55,12 @@
                             <div class="eventnormaltext">Lieu de l'event - Ville</div>
                             <div class="eventnormaltext">Date de l'event</div>
                             <div class="eventnormaltext"><span class="nbjoueur">50</span>/<span class="nbplayer">200</span></div>
-                            <a href="/details.html"><img  class="eventdetails cursor" src="/assets/icons/details.png"></a>
-                            <a href="/organizestats.html"><img  class="eventdetails cursor" src="/assets/icons/stat.png"></a>
+                            <a><img  class="eventdetails cursor" src="/assets/icons/details.png"></a>
                         </div>
+
+
+
+                        
                         <div class="borderselection eventpageselection">
 
                         </div>
@@ -69,8 +73,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="borderselection addicon"><a href="/organizeaddevent.html"><img class="iconaddicon cursor" src="/assets/icons/add.png"></a></div>
-
         </fieldset>
         </div>
     </div>

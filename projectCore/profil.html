@@ -52,30 +52,39 @@
                     </div>
                     <div id="profilinformations" class="borderselection">
                         <div id="informationtext">
-                        <div><b>NOM :</b><span class="lastname"></span></div>
-                        <div><b>PRENOM :</b><span class="firstname"></span></div>
-                        <div><b>EMAIL :</b><span id="email"></span></div>
-                        <div><b>AGE :</b><span id="age"></span></div>
-                        <div><b>VILLE :</b><span id="city"></span></div>
-                        <div><b>NOMBRE DE PARTIES JOU&EacuteES :</b><span id="gameplayed"></span></div>
+                        <div>NOM :<span class="lastname"></span></div>
+                        <div>PRENOM :<span class="firstname"></span></div>
+                        <div>EMAIL :<span id="email"></span></div>
+                        <div>AGE :<span id="age"></span></div>
+                        <div>VILLE :<span id="city"></span></div>
+                        <div>NOMBRE DE PARTIES JOU&EacuteES :<span id="gameplayed"></span></div>
                         <div class="ratingdiv" onmouseleave="ratingreset()">
-                            <div>NOTE :</div>
-                            <div onclick="updateRating(1)" onmouseenter="rating(1)" class="cursor">
+                            <div style="margin-right: 3%;">NOTE :</div>
+                            <div onclick="updateRating(1)" onmouseenter="rating(1)" >
                                 <img class="ratingimg" id="star1" src="/assets/rating/star 1.png">
                             </div>
-                            <div onclick="updateRating(2)" onmouseenter="rating(2)" class="cursor">
+                            <div onclick="updateRating(2)" onmouseenter="rating(2)" >
                                 <img class="ratingimg" id="star2" src="/assets/rating/star 1.png">
                             </div>
-                            <div onclick="updateRating(3)" onmouseenter="rating(3)" class="cursor">
+                            <div onclick="updateRating(3)" onmouseenter="rating(3)" >
                                 <img class="ratingimg" id="star3" src="/assets/rating/star 1.png">
                             </div>
-                            <div onclick="updateRating(4)" onmouseenter="rating(4)" class="cursor">
+                            <div onclick="updateRating(4)" onmouseenter="rating(4)" >
                                 <img  class="ratingimg" id="star4" src="/assets/rating/star 1.png">
                             </div>
-                            <div onclick="updateRating(5)" onmouseenter="rating(5)" class="cursor">
+                            <div onclick="updateRating(5)" onmouseenter="rating(5)" >
                                 <img class="ratingimg" id="star5" src="/assets/rating/star 1.png">
                             </div>
                         </div>
+                        <div class="ratingdiv" style="font-size: .8em;">
+                                <div><label for="physicalshapelabel">CONDITION PHYSIQUE :</label></div>
+                                <div><select name ="physicalshape" id="physicalshape" style="margin-left: 12%;">
+                               <option value="PhysicalShapeA">Je soulève des voitures</option>
+                               <option value="PhysicalShapeB">Je me debrouille pas trop mal</option>
+                               <option value="PhysicalShapeC">J'ai une forme physique correcte</option>
+                               <option value ="PhysicalShapeD">Je commence demain</option>
+                               <option value="PhysicalShapeE">Je conduis la voiture</option>
+                           </select></div></div>
                 </div>
         </fieldset>
         </div>

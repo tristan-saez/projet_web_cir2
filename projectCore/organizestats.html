@@ -33,12 +33,12 @@
                     <img src="/assets/sports/soccer.png" id="sportimage" class="borderselection" style="border-color:#FFD166 ;" onclick="sportchange()">
                     <div class="borderselection statborder" style="border-color:#FFD166 ;">
                         <form  id="stat_form">
-                            <div class="statflexbox">
-                                    <div><b>Sport :  </b><span class="sporttype"></span></div>
-                                    <div><b>EVENT :  </b><span class="event_name"></span></div>
-                                    <div><b>Adresse :  </b><span id="place"></span></div>
-                                    <div><b>VILLE :  </b><span id="city"></span></div>
-                                    <div><b>DATE :  </b><span id="day"></span >/<span id="month"></span>/<span id="year"></span></div>
+                            <div class="statflexbox stattext">
+                                    <div>Sport : <span class="sporttype"></span></div>
+                                    <div>Event : <span class="event_name"></span></div>
+                                    <div>Adresse : <span id="place"></span></div>
+                                    <div>Ville : <span id="city"></span></div>
+                                    <div>Date : <span id="day"></span >/<span id="month"></span>/<span id="year"></span></div>
                                 <label>Star du Match !</label>
                                      <select name = "sportselection" id="sportselection" onchange="sportchange(value)">
                                         <option value="nameplayer1">Emile Bondieu</option>
@@ -47,7 +47,7 @@
                                     <label for="score">Score du Match</label>
                                     <input type="number" name="score1" id="score1" placeholder="Score1" required>
                                     <input type="number" name="score2" id="score2" placeholder="Score2" required>
-                                    <input class="cursor" type="submit" id="matchsubmit" value="Enregistrer Statistiques" style="margin-bottom: 2%;">
+                                    <input class="cursor" type="submit" value="Enregistrer" style="margin-bottom: 2%;">
                                 </div>
                             </form>
                         </div>
