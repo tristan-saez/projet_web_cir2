@@ -15,6 +15,8 @@ a{
 #eventsbox::-webkit-scrollbar {
     display: none;
   }
+
+
 /* HEADER RELATED CONTENT */
 
 .menu-header{
@@ -482,7 +484,6 @@ border-radius: 10px;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-
         }
 
         .eventsporticon{
@@ -550,7 +551,41 @@ border-radius: 10px;
         }
 
 
+
+
+
+
+                /* DETAILS PAGE SELECTION */
+
+            
+        .detailsprofil{
+            height: 150px;
+            width: 100%;
+            margin-top: 1%;
+        }
+
+        #detailsinformations{
+            user-select: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
         
+        #detailsbox::-webkit-scrollbar {
+            display: none;
+          }
+
+        #detailsbox{
+            overflow: scroll;
+            border: pink;
+            margin-top: 1%;
+            border-width: 5px;
+            border-radius: 20px;
+            height: 430px;
+        }
+
+
+
+
 /* FOOTER RELATED CONTENT */
 
 .footer{
