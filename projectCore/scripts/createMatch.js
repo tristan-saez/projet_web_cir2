@@ -27,11 +27,10 @@ let eventduration = document.getElementById('eventduration');
 let price = document.getElementById('price');
 let playernumber = document.getElementById('playernumber');
 let eventplace = document.getElementById('eventplace');
-let eventaddress = document.getElementById("eventadress");
-
-let matching_passwords = false;
+let eventaddress = document.getElementById('eventadress');
+let starting_time = document.getElementById('startingtime');
 
 $('#event_form').submit((event) => {
     event.preventDefault();
-    ajaxRequest('POST', 'php/inscription.php/create-match', redirectAfterCreation, "sport="+sport.value+"&eventname="+eventname.value+"&eventdate="+eventdate.value+"&eventduration="+eventduration.value+"&price="+price.value+"&playernumber="+playernumber.value+"&eventplace="+eventplace.value+"&eventaddress="+eventaddress.value);
+    ajaxRequest('POST', 'php/createMatch.php/create-match', redirectAfterCreation, "sport="+sport.value+"&eventname="+eventname.value+"&eventdate="+eventdate.value+"&eventduration="+eventduration.value+"&price="+price.value+"&playernumber="+playernumber.value+"&eventplace="+eventplace.value+"&eventaddress="+eventaddress.value+"&startingtime="+starting_time.value);
 });

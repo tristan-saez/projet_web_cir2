@@ -1,6 +1,7 @@
 <?php
     // Check the request.
     require_once('database.php');
+    session_start();
 
     // Database connexion.
     $db = dbConnect();
@@ -19,36 +20,69 @@
     if($requestMethod == 'POST' && $requestRessource == 'create-match') {
         $data = "good";
 
-        
-        if($_POST['firstname'] != '') {$firstname = $_POST['event_name'];} else {$data = 'event_name';}
-        if($_POST['lastname'] != '') {$lastname = $_POST[''];} else {$data = 'lastname';}
-        if($_POST['birthdate'] != '') {$birthdate = $_POST['birthdate'];} else {$data = 'birthdate';}
-        if($_POST['mail'] != '') {$mail = $_POST['mail'];} else {$data = 'mail';}
-        if($_POST['password'] != '') {$password = password_hash($_POST['password'], PASSWORD_ARGON2I);} else {$data = "password";}
+        if($_POST['eventname'] != '') {$eventname = $_POST['eventname'];} else {$data = 'eventname';}
+        if($_POST['eventdate'] != '') {$eventdate = $_POST['eventdate'];} else {$data = 'eventdate';}
+        if($_POST['eventduration'] != '') {$eventduration = $_POST['eventduration'];} else {$data = 'eventduration';}
+        if($_POST['price'] != '') {$price = $_POST['price'];} else {$data = "price";}
+        if($_POST['playernumber'] != '') {$playernumber = $_POST['playernumber'];} else {$data = "playernumber";}
 
-        if($_POST['city'] != '') {
+        if($_POST['eventplace'] != '') {
             $request_sql = "SELECT insee FROM city ";
-            $request_sql .= "WHERE name=:city";
+            $request_sql .= "WHERE name=:eventplace";
             $query = $db->prepare($request_sql);
-            $query->bindParam(':city', $_POST['city'], PDO::PARAM_STR, 100);
+            $query->bindParam(':eventplace', $_POST['eventplace'], PDO::PARAM_STR, 100);
             $query->execute();
             $results = $query->fetchAll();
 
             if($results) {
-                $city = $results[0]['insee'];
+                $eventplace = $results[0]['insee'];
             } else {
-                $data = "city";
+                $data = "eventplace";
             }
         } else {
-            $data = "city"; 
+            $data = "eventplace"; 
         }
 
-        if($data = "good") {
-            $request_sql = "INSERT INTO profile (mail, first_name, last_name, password, picture, birthdate, insee) VALUES (".'"'.$mail.'","'.$firstname.'","'.$lastname.'","'.$password.'","'.$picture.'","'.$birthdate.'",'.$city.");";
+        if($_POST['sport'] != '') {
+            $request_sql = "SELECT id FROM sports ";
+            $request_sql .= "WHERE name=:sport";
             $query = $db->prepare($request_sql);
+            $query->bindParam(':sport', $_POST['sport'], PDO::PARAM_STR, 100);
             $query->execute();
+            $results = $query->fetchAll();
+
+            if($results) {
+                $id_sports = $results[0]['id'];
+            } else {
+                $data = "sport";
+            }
+        } else {
+            $data = "sport"; 
+        }
+
+        if($_POST['eventaddress'] != '') {$eventaddress = $_POST['eventaddress'];} else {$data = "eventaddress";}
+        if($_POST['startingtime'] != '') {$startingtime = $_POST['startingtime'];} else {$data = "startingtime";}
+        if($_SESSION['mail'] != '') {$mail = $_SESSION['mail'];} else {$data = 'connection';}
+
+        if($data = "good") {
+            $request_sql = "INSERT INTO match_event (date, start_hour, price, duration, name, address, nb_player, id_sports, mail) VALUES (:date, :start_hour, :price, :duration, :match_name, :address, :nb_player, :id_sports, :mail)";
+            $query = $db->prepare($request_sql);
+            $query->execute(array(
+                ':date'=>$eventdate,
+                ':start_hour'=>$startingtime,
+                ':price'=>$price,
+                ':duration'=>$eventduration,
+                ':match_name'=>$eventname,
+                ':address'=>$eventaddress,
+                ':nb_player'=>$playernumber,    
+                ':id_sports'=>$id_sports,
+                ':mail'=>$mail
+            ));
+
+            //$request_sql = "INSERT INTO a_lieu_a (id, insee) VALUES (:id, :insee)";
         }
     }
+
     // Send data to the client.
     header('Content-Type: application/json; charset=utf-8');
     header('Cache-control: no-store, no-cache, must-revalidate');
