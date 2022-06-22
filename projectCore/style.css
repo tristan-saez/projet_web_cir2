@@ -335,7 +335,7 @@ border-radius: 10px;
         .profilbox{
             border-color: rgb(110, 97, 99);
             width: 90%;
-            height: 85%;
+            height: 86%;
             margin-left: 2.5%;
             border-width: 3px;
             
@@ -460,10 +460,10 @@ border-radius: 10px;
         #eventsbox{
             overflow: scroll;
             border: pink;
-            margin-top: 1%;
+            margin-top: 0.2%;
             border-width: 5px;
             border-radius: 20px;
-            height: 95%;
+            height: 87.2%;
         }
 
         #eventboxfeature{
@@ -537,6 +537,10 @@ border-radius: 10px;
             margin-bottom: 1.5%;
           }
 
+
+        .top50{
+            margin-top: 1%;
+        }
                 /* STATISTIQUES */
 
         .imgplayerstat{
@@ -616,6 +620,13 @@ border-radius: 10px;
             background-color: #FFD166;
         }
 
+        .istobeaccepted{
+            background-color: #EF476F;
+        }
+
+        .isaccepted{
+            background-color: #63C317;
+        }
 
         .smallicon{
             height: 40px;

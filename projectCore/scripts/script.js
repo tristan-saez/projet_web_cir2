@@ -135,4 +135,3 @@ function ratingreset(){
         document.getElementById("star4").src = "/assets/rating/star 1.png";
         document.getElementById("star5").src = "/assets/rating/star 1.png";
 }
-
