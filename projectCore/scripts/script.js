@@ -136,3 +136,16 @@ function ratingreset(){
         document.getElementById("star5").src = "/assets/rating/star 1.png";
 }
 
+
+var filterdirectionchange = 1;
+function filterchange(){
+    if(filterdirectionchange == 1){
+    document.getElementById("filterdirection").src = "/assets/icons/up.png";
+    filterdirectionchange = 2;
+}
+    else{
+        filterdirectionchange = 1;
+        document.getElementById("filterdirection").src = "/assets/icons/down.png";
+
+    }
+}
