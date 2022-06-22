@@ -28,6 +28,18 @@
         }
     }
 
+    //update the physical shape in BDD
+    if($requestMethod == 'POST' && $requestRessource == 'update-shape') {
+        if(isset($_SESSION['mail'])) {
+            $request = "UPDATE profile SET physical_shape = ".$_POST['shape'];
+            $request .= " WHERE mail=:mail";
+            $query = $db->prepare($request);
+            $query->bindParam(':mail', $_SESSION['mail'], PDO::PARAM_STR, 100);
+            $query->execute();
+            $data = $_POST['shape'];
+        }
+    }
+
 
     // Check if an user is connected
     if($requestMethod == 'GET' && $requestRessource == 'show-profile') {

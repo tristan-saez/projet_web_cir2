@@ -8,16 +8,16 @@
 
 'use strict';
 
-function requestUpdate() {
-    ajaxRequest('GET', 'php/updateDatas.php/match-list', displayMatches);
+function requestUpdateComing() {
+    ajaxRequest('GET', 'php/updateDatas.php/match-coming-list', displayMatchesComing);
 }
 
-function showDetails() {
+function showDetailsComing(match) {
     window.location.replace("details.html");
     console.log(match);
 }
 
-function displayMatches(result) {
+function displayMatchesComing(result) {
     for(var element in result) {
         var match_template = `<div class="borderselection eventpageselection">
             <div class="sportype"><img  class="eventsporticon" src="${result[element]['picture']}">
@@ -27,11 +27,11 @@ function displayMatches(result) {
             <div class="eventnormaltext">${result[element]['address']} - ${result[element][7]}</div>
             <div class="eventnormaltext">${result[element]['date']}</div>
             <div class="eventnormaltext"><span class="nbjoueur">${result[element]['current_players']}</span>/<span class="nbplayer">${result[element]['nb_player']}</span></div>
-            <div><img onclick="showDetails(${result[element][0]})" class="eventdetails cursor" src="/assets/icons/details.png"></div>
+            <div><img onclick="showDetailsComing(${result[element][0]})" class="eventdetails cursor" src="/assets/icons/details.png"></div>
         </div>`;
         console.log(match_template);
         $('#matchstext').append(match_template);
     }
 }
 
-requestUpdate();
+requestUpdateComing();
