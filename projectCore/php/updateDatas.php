@@ -30,7 +30,7 @@
         $data = $query->fetchAll();
         
         foreach($data as $key => $value) {
-            $request_sql = "SELECT COUNT(DISTINCT p.mail) FROM match_event m JOIN participe_a p ON p.id =:m_id";
+            $request_sql = "SELECT COUNT(DISTINCT p.mail) FROM match_event m JOIN participe_a p ON p.id =:m_id WHERE p.demand = 1";
             $query = $db->prepare($request_sql);
             $query->execute(array(
                 ':m_id'=>$value[0]
@@ -52,7 +52,7 @@
         $data = $query->fetchAll();
         
         foreach($data as $key => $value) {
-            $request_sql = "SELECT COUNT(DISTINCT p.mail) FROM match_event m JOIN participe_a p ON p.id =:m_id";
+            $request_sql = "SELECT COUNT(DISTINCT p.mail) FROM match_event m JOIN participe_a p ON p.id =:m_id WHERE p.demand = 1";
             $query = $db->prepare($request_sql);
             $query->execute(array(
                 ':m_id'=>$value[0]
@@ -73,7 +73,7 @@
         
         //var_dump($data);
         foreach($data as $key => $value) {
-            $request_sql = "SELECT COUNT(DISTINCT p.mail) FROM match_event m JOIN participe_a p ON p.id =:m_id";
+            $request_sql = "SELECT COUNT(DISTINCT p.mail) FROM match_event m JOIN participe_a p ON p.id =:m_id WHERE p.demand = 1";
             $query = $db->prepare($request_sql);
             $query->execute(array(
                 ':m_id'=>$value[0]

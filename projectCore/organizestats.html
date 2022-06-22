@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Needs to be on all pages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 	<script src="/scripts/ajaxRequest.js"></script>
     <script src="/scripts/isConnected.js"></script>
     <script src="/scripts/script.js" defer></script>
+    <!-- END  -->
 
-
-
+    <script src="/scripts/stats.js" defer></script>
 </head>
+
 <body>
     <div class="menu-header">
         <a href="/profil.html"><img src="/assets/icons/profile.png"  class="imgheader cursor"></a>
@@ -30,20 +32,19 @@
             <fieldset class="profilbox">
             <legend class="fieldsettitle" style="color: #FFD166;">Statistiques du Match</legend>
                 <div id="profilflexbox">
-                    <img src="/assets/sports/soccer.png" id="sportimage" class="borderselection" style="border-color:#FFD166 ;" onclick="sportchange()">
+                    <img src="/assets/sports/soccer.png" id="sportimage" class="borderselection" style="border-color:#FFD166 ;">
                     <div class="borderselection statborder" style="border-color:#FFD166 ;">
                         <form  id="stat_form">
                             <div class="statflexbox stattext">
-                                    <div>Sport : <span class="sporttype"></span></div>
-                                    <div>Event : <span class="event_name"></span></div>
+                                    <div>Sport : <span id="sportname" class="sporttype"></span></div>
+                                    <div>Event : <span id="event_title" class="event_name"></span></div>
                                     <div>Adresse : <span id="place"></span></div>
                                     <div>Ville : <span id="city"></span></div>
-                                    <div>Date : <span id="day"></span >/<span id="month"></span>/<span id="year"></span></div>
+                                    <div>Date : <span id="date"></span ></div>
                                 <label>Star du Match !</label>
-                                     <select name = "sportselection" id="sportselection" onchange="sportchange(value)">
-                                        <option value="nameplayer1">Emile Bondieu</option>
+                                     <select name = "sportselection" id="bestplayerselection" onchange="changeProfilePicture();">
                                     </select>
-                                        <div><img  class="imgplayerstat" src="/assets/images/defaultimage.png"></div>
+                                        <div><img id="profile_picture" class="imgplayerstat" src="/assets/images/defaultimage.png"></div>
                                     <label for="score">Score du Match</label>
                                     <input type="number" name="score1" id="score1" placeholder="Score1" required>
                                     <input type="number" name="score2" id="score2" placeholder="Score2" required>

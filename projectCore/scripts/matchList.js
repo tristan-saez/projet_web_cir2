@@ -12,9 +12,8 @@ function requestUpdate() {
     ajaxRequest('GET', 'php/updateDatas.php/match-list', displayMatches);
 }
 
-function showDetails() {
-    window.location.replace("details.html");
-    console.log(match);
+function showDetails(match) {
+    window.location.replace("details.html?match="+match);
 }
 
 function displayMatches(result) {

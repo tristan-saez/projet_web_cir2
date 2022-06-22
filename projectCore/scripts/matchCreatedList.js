@@ -13,12 +13,10 @@ function requestUpdateCreated() {
 }
 
 function showDetailsCreated(match) {
-    window.location.replace("details.html");
-    console.log(match);
+    window.location.replace("details.html?match="+match);
 }
 function addStats(match) {
-    window.location.replace("organizestats.html");
-    console.log(match);
+    window.location.replace("organizestats.html?match="+match);
 }
 
 function displayMatchesCreated(result) {

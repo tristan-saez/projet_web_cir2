@@ -80,7 +80,7 @@
                 $data = "city"; 
             }
 
-            if($data = "good") {
+            if($data == "good") {
                 $request_sql = "UPDATE profile SET first_name = :firstname, last_name = :lastname, password = :password, birthdate = :birthdate, insee = :city WHERE mail = :mail";
                 $query = $db->prepare($request_sql);
                 $query->execute(array(

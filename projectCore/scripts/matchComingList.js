@@ -13,7 +13,7 @@ function requestUpdateComing() {
 }
 
 function showDetailsComing(match) {
-    window.location.replace("details.html");
+    window.location.replace("details.html?match="+match);
     console.log(match);
 }
 

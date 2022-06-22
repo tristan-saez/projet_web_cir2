@@ -30,8 +30,10 @@ function updateProfile() {
 
 function showInfos(result) {
     console.log(result);
-    $('.lastname').val(result['0']['last_name']);
-    $('.firstname').val(result['0']['first_name']);
+    $('.lastname').text(result['0']['last_name']);
+    $('.firstname').text(result['0']['first_name']);
+    $('#lastnamefield').val(result['0']['last_name']);
+    $('#firstnamefield').val(result['0']['first_name']);
     $('#email').val(result['0']['mail']);
     $('#age').val(result['age']+" ans");
     $('#city').val(result['0']['name']);

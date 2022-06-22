@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 	<script src="/scripts/ajaxRequest.js"></script>
     <script src="/scripts/isConnected.js"></script>
-    <script src="/scripts/profile.js" defer></script>
+    <script src="/scripts/details.js" defer></script>
     <script src="/scripts/script.js" defer></script>
 
 </head>
@@ -35,175 +35,26 @@
                     <div class="borderselection" style="height:220px ;">
 
                         <div class="eventpageselection">
-                            <div class="sportype"><img  class="eventsporticon" src="/assets/sports/football.png">
-                                <div>Sport type</div>
+                            <div class="sportype"><img  class="eventsporticon" id="sporticon" src="">
+                                <div id="sportname">Sport type</div>
                             </div>
-                            <div class="eventeventitle">Titre de l'event</div>
-                            <div class="eventnormaltext">Lieu de l'event - Ville</div>
-                            <div class="eventnormaltext">Date de l'event</div>
-                            <div class="eventnormaltext"><span class="nbjoueur">50</span>/<span class="nbplayer">200</span></div>
+                            <div class="eventeventitle" id="event_title">Titre de l'event</div>
+                            <div class="eventnormaltext" id="eventplace">Lieu de l'event - Ville</div>
+                            <div class="eventnormaltext" id="eventdate">Date de l'event</div>
+                            <div class="eventnormaltext"><span id="nbjoueur">50</span>/<span id="nbplayer">200</span></div>
                         </div>
                         <div class="eventpageselection">
                              <div class="detailsnormaltext">Organisateur : <span id="organiser_name">Mon nom</span></div>
-                             <div class="detailsnormaltext">Prix :  <span id="price">120</span>€</div>
-                             <div class="detailsnormaltext">Durée : <span id="lasthours">hours</span>:<span id="lastminutes">minutes</span></div>
-                             <div class="detailsnormaltext">Score : <span id="leftscore">10</span>-<span id="rightscore">0</span></div>
-                             <div><img src="/assets/icons/adduser.png" class="smallicon"></div>
+                             <div class="detailsnormaltext">Prix :  <span id="price">120</span></div>
+                             <div class="detailsnormaltext">Durée : <span id="duration">hours</span></div>
+                             <div class="detailsnormaltext">Score : <span id="score">10</span></div>
+                             <div><img src="/assets/icons/adduser.png" class="smallicon cursor" onclick="joinMatchPlease()"></div>
                         </div>
                     </div>
             </div>  
             <div id="detailsbox">  <!-- CEST ICI POUR LA HAUTEUR DU SCROLL MAIS YA QUE DU PIXEL -->
                 <div id="profilinformations"> 
                     <div id="detailsinformations">
-
-                        <div class="borderselection detailsprofil starofthematch">
-                           <div class="detailprofil">
-                            <div><img class="detailsimg" src="/assets/images/defaultimage.png"></div>
-                            <div>
-                                <span>NOM PRENOM</span>
-                                <span>AGE</span>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="borderselection detailsprofil ">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>  
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>  
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>  
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                           
-                        </div>
-                        <div class="borderselection detailsprofil">
-                            
-                        </div>
-
                     </div>
                 </div>
             </div>

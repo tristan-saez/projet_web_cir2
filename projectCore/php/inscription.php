@@ -50,7 +50,7 @@
                 $data = "city"; 
             }
 
-            if($data = "good") {
+            if($data == "good") {
                 $request_sql = "INSERT INTO profile (mail, first_name, last_name, password, picture, birthdate, insee) VALUES (".'"'.$mail.'","'.$firstname.'","'.$lastname.'","'.$password.'","'.$picture.'","'.$birthdate.'",'.$city.");";
                 $query = $db->prepare($request_sql);
                 $query->execute();
