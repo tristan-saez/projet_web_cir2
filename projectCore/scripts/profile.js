@@ -16,14 +16,26 @@
 function ShowProfile() {
     ajaxRequest('GET', 'php/profile.php/show-profile/', showInfos);
 }
+function updateProfile() {
+    document.getElementById('lastnamefield').disabled=true;
+    document.getElementById('firstnamefield').disabled=true;
+    document.getElementById('password').disabled=true;
+    document.getElementById('age').disabled=true;
+    document.getElementById('age').type="text";
+    document.getElementById('city').disabled=true;
+    $('#password').val("");
+    document.getElementById('maj_button').style.display="none";
+    ShowProfile();
+}
+
 function showInfos(result) {
     console.log(result);
-    $('.lastname').text(" "+result['0']['last_name']);
-    $('.firstname').text(" "+result['0']['first_name']);
-    $('#email').text(" "+result['0']['mail']);
-    $('#age').text(" "+result['age']+" ans");
-    $('#city').text(" "+result['0']['name']);
-    $('#gameplayed').text(" "+result['0']['played_matches']);
+    $('.lastname').val(result['0']['last_name']);
+    $('.firstname').val(result['0']['first_name']);
+    $('#email').val(result['0']['mail']);
+    $('#age').val(result['age']+" ans");
+    $('#city').val(result['0']['name']);
+    $('#gameplayed').text(result['0']['played_matches']);
     if(result['0']['picture']) document.getElementById("profilimage").src = result['0']['picture'];
     rating(parseInt(result['0']['app_note']));
     showShape(result['0']['physical_shape']);
@@ -65,6 +77,28 @@ function redirectAfterDisconnection() {
 
 $('#disconnect').click(()=> {
     ajaxRequest('POST', 'php/connection.php/account-disconnect', redirectAfterDisconnection);
+});
+
+$('#settings').click(()=> {
+    document.getElementById('lastnamefield').disabled=false;
+    document.getElementById('firstnamefield').disabled=false;
+    document.getElementById('password').disabled=false;
+    document.getElementById('age').disabled=false;
+    document.getElementById('age').type="date";
+    document.getElementById('city').disabled=false;
+    document.getElementById('maj_button').style.display="block";
+});
+
+$('#profilinformations').submit((event)=> {
+    event.preventDefault();
+
+    let last_name = document.getElementById('lastnamefield').value;
+    let first_name = document.getElementById('firstnamefield').value;
+    let mail = document.getElementById('email').value;
+    let city = document.getElementById('city').value;
+    let password = document.getElementById('password').value;
+    let birthdate = document.getElementById('age').value;
+    ajaxRequest('POST', 'php/profile.php/update-infos', updateProfile,"lastname="+last_name+"&firstname="+first_name+"&mail="+mail+"&city="+city+"&password="+password+"&birthdate="+birthdate);
 });
 
 ShowProfile();

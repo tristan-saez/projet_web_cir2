@@ -55,6 +55,45 @@
         }
     }
 
+    if($requestMethod == 'POST' && $requestRessource == 'update-infos') {
+        $data = "good";
+            $mail = $_POST['mail'];
+            if($_POST['firstname'] != '') {$firstname = $_POST['firstname'];} else {$data = 'firstname';}
+            if($_POST['lastname'] != '') {$lastname = $_POST['lastname'];} else {$data = 'lastname';}
+            if($_POST['birthdate'] != '') {$birthdate = $_POST['birthdate'];} else {$data = 'birthdate';}
+            if($_POST['password'] != '') {$password = password_hash($_POST['password'], PASSWORD_ARGON2I);} else {$data = "password";}
+
+            if($_POST['city'] != '') {
+                $request_sql = "SELECT insee FROM city ";
+                $request_sql .= "WHERE name=:city";
+                $query = $db->prepare($request_sql);
+                $query->bindParam(':city', $_POST['city'], PDO::PARAM_STR, 100);
+                $query->execute();
+                $results = $query->fetchAll();
+
+                if($results) {
+                    $city = $results[0]['insee'];
+                } else {
+                    $data = "city";
+                }
+            } else {
+                $data = "city"; 
+            }
+
+            if($data = "good") {
+                $request_sql = "UPDATE profile SET first_name = :firstname, last_name = :lastname, password = :password, birthdate = :birthdate, insee = :city WHERE mail = :mail";
+                $query = $db->prepare($request_sql);
+                $query->execute(array(
+                    ':mail'=>$mail,
+                    ':firstname'=>$firstname,
+                    ':lastname'=>$lastname,
+                    ':password'=>$password,
+                    ':birthdate'=>$birthdate,
+                    ':city'=>$city
+                ));
+            }
+    }
+
     // Send data to the client.
     header('Content-Type: application/json; charset=utf-8');
     header('Cache-control: no-store, no-cache, must-revalidate');

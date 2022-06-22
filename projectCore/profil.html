@@ -46,18 +46,19 @@
                                     <option value="PhysicalShapeG">Photo de profil 7</option>
                                 </select>
                             </form>
-                            <div><img src="/assets/icons/settings.png" style="height: 30px;margin-left: 120px;"></div>
+                            <div><img id="settings" class="cursor" src="/assets/icons/settings.png" style="height: 30px;margin-left: 120px;"></div>
                             <div id="disconnect" class="cursor"><img src="/assets/icons/deconnection.png" style="height: 30px; margin-left: 20px; "></div>
                         </div>
                     </div>
-                    <div id="profilinformations" class="borderselection">
+                    <form id="profilinformations" class="borderselection">
                         <div id="informationtext">
-                        <div>NOM :<span class="lastname"></span></div>
-                        <div>PRENOM :<span class="firstname"></span></div>
-                        <div>EMAIL :<span id="email"></span></div>
-                        <div>AGE :<span id="age"></span></div>
-                        <div>VILLE :<span id="city"></span></div>
-                        <div>NOMBRE DE PARTIES JOU&EacuteES :<span id="gameplayed"></span></div>
+                        <div>EMAIL : <input type="text" id="email" disabled></div>
+                        <div>NOM : <input type="text" id="lastnamefield" class="lastname" disabled ></div>
+                        <div>PRENOM : <input type="text" id="firstnamefield" class="firstname" disabled></div>
+                        <div>AGE : <input type="text" id="age" disabled></div>
+                        <div>VILLE : <input type="text" id="city" disabled></div>
+                        <div>MOT DE PASSE : <input type="password" id="password" disabled></div>
+                        <div>NOMBRE DE PARTIES JOU&EacuteES : <span id="gameplayed"></span></div>
                         <div class="ratingdiv">
                             <div style="margin-right: 3%;">NOTE :</div>
                             <div onclick="updateRating(1)">
@@ -89,7 +90,10 @@
                                 </select>
                             </div>
                         </div>
-                </div>
+                        <div>
+                            <input id="maj_button" type="submit" class="cursor" value="Mettre à jour" style="display:none;">
+                        </div>
+                    </form>
         </fieldset>
         </div>
     </div>
