@@ -16,6 +16,9 @@ a{
     display: none;
   }
 
+  #comingeventsbox::-webkit-scrollbar {
+    display: none;
+  }
 
 /* HEADER RELATED CONTENT */
 
@@ -227,6 +230,7 @@ border-radius: 10px;
             background-color: white;
             border-radius: 7px;
             border-color:#073B4C;
+            margin-top: 0.8%;
             border-style: double;
 /*             background: rgba(7, 59, 76, 0.7);
  */
@@ -299,13 +303,16 @@ border-radius: 10px;
         }
 
         input[type="mail"], input[type="password"], input[type="text"],input[type="date"],input[type="file"]{
-            width: 50%;
+            width: 80%;
             border-radius: 6px;
             font-family: 'Impact';
             font-size: 16px;
             margin-top: 4px;
         }
 
+        .totheright{
+            text-align: end;
+        }
 
         input[type="submit"]{
             width: 190px;
@@ -339,8 +346,8 @@ border-radius: 10px;
         .profilbox{
             border-color: rgb(110, 97, 99);
             width: 90%;
-            height: 86%;
-            margin-left: 2.5%;
+            height: 87.5%;
+            margin-left: 2.2%;
             border-width: 3px;
             
          
@@ -466,7 +473,16 @@ border-radius: 10px;
             margin-top: 0.2%;
             border-width: 5px;
             border-radius: 20px;
-            height: 87.2%;
+            height: 84%;
+        }
+
+        #comingeventsbox{
+            overflow: scroll;
+            border: pink;
+            margin-top: 0.2%;
+            border-width: 5px;
+            border-radius: 20px;
+            height: 95%;
         }
 
         #eventboxfeature{
@@ -487,7 +503,7 @@ border-radius: 10px;
         .eventpageselection{
             height: 150px;
             width: 99%;
-            margin-top: 1%;
+            margin-top: 0.5%;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
@@ -524,10 +540,14 @@ border-radius: 10px;
             margin-top: 1%;
         }
 
+        .addiconback{
+            margin-top: 2.8%;
+        }
+
         .iconaddicon{
             margin-left: 50%;
-            width: 33px;
-            height: 33px;
+            width: 30px;
+            height: 30px;
             margin-top: 2px;
         }
 
@@ -601,7 +621,7 @@ border-radius: 10px;
             border-width: 5px;
             border-radius: 20px;
             margin-top: 0.7%;
-            height: 367px;
+            height: 280px;
         }
 
 
