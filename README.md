@@ -1,6 +1,7 @@
 # ProjetCIR2
 
-Bonjour
+- python : mysql-connect-python + pandas
+
 
 
 
