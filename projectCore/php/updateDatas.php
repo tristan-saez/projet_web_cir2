@@ -27,7 +27,19 @@
         $query = $db->prepare($request_sql);
         $query->execute();
         $data = $query->fetchAll();
-        // var_dump($data);
+        
+        foreach($data as $key => $value) {
+            $request_sql = "SELECT COUNT(DISTINCT p.mail) FROM match_event m JOIN participe_a p ON p.id =:m_id";
+            $query = $db->prepare($request_sql);
+            $query->execute(array(
+                ':m_id'=>$value[0]
+            ));
+            $result = $query->fetchAll();
+            //var_dump($result[0][0]);
+            $data[$key]['current_players'] = $result[0][0];
+        }
+        
+
     }
 
     if($requestMethod == 'GET' && $requestRessource == 'match-created-list') {

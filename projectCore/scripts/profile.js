@@ -17,11 +17,12 @@ function ShowProfile() {
     ajaxRequest('GET', 'php/profile.php/show-profile/', showInfos);
 }
 function updateRating(rating) {
+    console.log("updating...");
     ajaxRequest('POST', 'php/profile.php/update-rating/', showRating, "rating="+rating);
 }
 
 function showRating(result) {
-    rating(result);
+    rating(parseInt(result));
 }
 function showInfos(result) {
     console.log(result);
@@ -32,7 +33,7 @@ function showInfos(result) {
     $('#city').text(" "+result['0']['name']);
     $('#gameplayed').text(" "+result['0']['played_matches']);
     if(result['0']['picture']) document.getElementById("profilimage").src = result['0']['picture'];
-    rating(result['0']['app_note']);
+    rating(parseInt(result['0']['app_note']));
 }
 
 function redirectAfterDisconnection() {

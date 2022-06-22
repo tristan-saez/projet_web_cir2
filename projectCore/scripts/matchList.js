@@ -25,7 +25,7 @@ function displayMatches(result) {
             <div class="eventeventitle">${result[element][4]}</div>
             <div class="eventnormaltext">${result[element]['address']} - ${result[element][7]}</div>
             <div class="eventnormaltext">${result[element]['date']}</div>
-            <div class="eventnormaltext"><span class="nbjoueur">0</span>/<span class="nbplayer">${result[element]['nb_player']}</span></div>
+            <div class="eventnormaltext"><span class="nbjoueur">${result[element]['current_players']}</span>/<span class="nbplayer">${result[element]['nb_player']}</span></div>
             <div><img onclick="showDetails(${result[element][0]})" class="eventdetails cursor" src="/assets/icons/details.png"></div>
         </div>`;
         console.log(match_template);

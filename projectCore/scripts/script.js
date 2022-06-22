@@ -95,13 +95,12 @@ function profilchange(profilpicture){
 
 
 function rating(shootingstar){
-    //alert("oui");
-    //ratingreset()
-
+    ratingreset();
+    console.log(shootingstar)
 switch(shootingstar){
     case 1:
         document.getElementById("star1").src = "/assets/rating/star.png";
-    break;
+        break;
     case 2:
         document.getElementById("star1").src = "/assets/rating/star.png";
         document.getElementById("star2").src = "/assets/rating/star.png";
