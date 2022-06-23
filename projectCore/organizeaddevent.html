@@ -12,6 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 	<script src="/scripts/ajaxRequest.js"></script>
     <script src="/scripts/isConnected.js"></script>
+    <script src="/scripts/autocomplete.js" defer></script>
     <script src="/scripts/script.js" defer></script>
     <script src="/scripts/createMatch.js" defer></script>
 
@@ -77,11 +78,12 @@
                                 <label for="playernumber">Nombre de joueurs</label>
                                 <input type="number" name="playernumber" id="playernumber" placeholder="nb de joueurs" required>
                                 <table>
-                                    <tr><td>
+                                    <tr>
+                                        <td class="need_autocomplete">
 
                                         <label for="eventplace">Ville</label>
                                         <input type="text" name="eventplace" id="eventplace" placeholder="Ville" required>
-                                    </td>
+                                        </td>
                                     <td>
                                         <label for="eventadress">Adresse</label>
                                         <input type="text" name="eventadress" id="eventadress" placeholder="adresse" required>

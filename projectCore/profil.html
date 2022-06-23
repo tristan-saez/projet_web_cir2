@@ -12,6 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 	<script src="/scripts/ajaxRequest.js"></script>
     <script src="/scripts/isConnected.js"></script>
+    <script src="/scripts/autocomplete.js" defer></script>
     <script src="/scripts/profile.js" defer></script>
     <script src="/scripts/script.js" defer></script>
 </head>
@@ -50,7 +51,7 @@
                             <div>PRENOM : <input type="text" id="firstnamefield" class="firstname" disabled></div>
                             <div >Mail : <input type="text" id="email" disabled></div>
                         <div>AGE : <input type="text" id="age" disabled></div>
-                        <div>VILLE : <input type="text" id="city" disabled></div>
+                        <div class="need_autocomplete">VILLE : <input type="text" id="city" disabled></div>
                         <div>MOT DE PASSE : <input type="password" id="password" disabled></div>
                         <div>NOMBRE DE PARTIES JOU&EacuteES : <span id="gameplayed"></span></div><br>
                         <div class="ratingdiv">

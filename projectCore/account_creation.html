@@ -11,6 +11,7 @@
     <!-- Needs to be on all pages -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     <script src="/scripts/ajaxRequest.js"></script>
+    <script src="/scripts/autocomplete.js" defer></script>
     <script src="/scripts/inscription.js" defer></script>
 
 </head>
@@ -37,8 +38,10 @@
                     <input id="mail" type="mail" name="mail" placeholder="example@mail.com" required>
                     <label for="birthdate">Date de naissance</label>
                     <input id="birthdate" type="date" name="birthdate" placeholder="birthdate" required>
-                    <label for="ville">Ville</label>
-                    <input id="city" type="text" name="city" placeholder="Ville" required>
+                    <div class="need_autocomplete">
+                        <label for="ville">Ville</label>
+                        <input id="city" type="text" name="city" placeholder="Ville" required>
+                    </div>
                     <label for="psw">mot de passe</label>
                     <input id="password" type="password" name="password" placeholder="password" required>
                     <input id="password_confirmation" type="password" name="password" placeholder="password confirmation" required>
