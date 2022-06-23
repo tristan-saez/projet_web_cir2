@@ -31,7 +31,7 @@
             if($_POST['birthdate'] != '') {$birthdate = $_POST['birthdate'];} else {$data = 'birthdate';}
             if($_POST['mail'] != '') {$mail = $_POST['mail'];} else {$data = 'mail';}
             if($_POST['password'] != '') {$password = password_hash($_POST['password'], PASSWORD_ARGON2I);} else {$data = "password";}
-            $picture = ($_POST['picture'] != '')?NULL:$_POST['picture'];
+            $picture = ($_POST['picture'] != '')?"/assets/profilpictures/pp_1.png":$_POST['picture'];
 
             if($_POST['city'] != '') {
                 $request_sql = "SELECT insee FROM city ";
@@ -51,9 +51,17 @@
             }
 
             if($data == "good") {
-                $request_sql = "INSERT INTO profile (mail, first_name, last_name, password, picture, birthdate, insee) VALUES (".'"'.$mail.'","'.$firstname.'","'.$lastname.'","'.$password.'","'.$picture.'","'.$birthdate.'",'.$city.");";
+                $request_sql = "INSERT INTO profile (mail, first_name, last_name, password, picture, birthdate, insee, played_matches, app_note, physical_shape) VALUES (:mail, :first_name, :last_name, :password, :picture, :birthdate, :insee, 0, 0, 2);";
                 $query = $db->prepare($request_sql);
-                $query->execute();
+                $query->execute(array(
+                    ':mail'=>$mail,
+                    ':first_name'=>$firstname,
+                    ':last_name'=>$lastname,
+                    ':password'=>$password,
+                    ':picture'=>$picture,
+                    ':birthdate'=>$birthdate,
+                    ':insee'=>$city
+                ));
             }
 
         } else {
