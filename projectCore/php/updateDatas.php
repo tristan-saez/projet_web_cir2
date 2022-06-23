@@ -37,6 +37,7 @@
             ));
             $result = $query->fetchAll();
             //var_dump($result[0][0]);
+            $data[$key]['is_full'] = 1;
             $data[$key]['current_players'] = $result[0][0];
         }
         
@@ -59,6 +60,7 @@
             ));
             $result = $query->fetchAll();
             //var_dump($result[0][0]);
+            $data[$key]['is_full'] = 1;
             $data[$key]['current_players'] = $result[0][0];
         }
     }
@@ -80,6 +82,7 @@
             ));
             $result = $query->fetchAll();
             //var_dump($result[0][0]);
+            $data[$key]['is_full'] = 1;
             $data[$key]['current_players'] = $result[0][0];
         }
     }

@@ -32,9 +32,19 @@ function displayMatchesCreated(result) {
             <div><img onclick="showDetailsCreated(${result[element][0]})" class="eventdetails cursor" src="/assets/icons/details.png"></div>
             <div><img onclick="addStats(${result[element][0]})" class="eventdetails cursor" src="/assets/icons/stat.png"></div>
         </div>`;
-        console.log(match_template);
-        $('#matchstext').append(match_template);
+        if(result[element]['is_full']) $('#matchstext').append(match_template);
     }
 }
+$('#filter_form').change(()=> {
+
+    let city = (document.getElementById('cityfiltration').value == '')?0:document.getElementById('cityfiltration').value;
+    let date = document.getElementById('datefiltration').value;
+    let sport = document.getElementById('sportfiltration').value;
+    let is_full = document.getElementById('ismatchfull').value;
+
+    ajaxRequest('GET', 'php/filtering.php/filter-match-created-list', displayMatchesCreated, "city="+city+"&date="+date+"&sport="+sport+"&is_full="+is_full);
+});
+
+
 
 requestUpdateCreated();
