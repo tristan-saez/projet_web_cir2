@@ -40,6 +40,28 @@
         }
     }
 
+    if($requestMethod == 'GET' && $requestRessource == 'get-pictures-list') {
+        $i = 0;
+        $data = array();
+        foreach (glob('../assets/profilpictures/*.png') as $filename) {
+            $p = pathinfo($filename);
+            $data[] .= $p['filename'];
+            $i++;
+        }
+    }
+
+    if($requestMethod == 'POST' && $requestRessource == 'update-picture') {
+        if(isset($_SESSION['mail'])) {
+            $picture = "/assets/profilpictures/".$_POST['picture'].".png";
+            $request = "UPDATE profile SET picture = :picture WHERE mail=:mail";
+            $query = $db->prepare($request);
+            $query->execute(array(
+                ':mail' => $_SESSION['mail'],
+                ':picture' => $picture
+            ));
+            $data = $_POST['picture'];
+        }
+    }
 
     // Check if an user is connected
     if($requestMethod == 'GET' && $requestRessource == 'show-profile') {

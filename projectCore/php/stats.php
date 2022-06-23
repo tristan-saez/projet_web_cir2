@@ -116,6 +116,33 @@
         $data = $data[0][0];
     }
 
+    if($requestMethod == 'POST' && $requestRessource == 'set-stats') {
+        $match =  $_POST['match'];
+        $mail = $_POST['star'];
+
+        $score = (($_POST['score1'] != "null")?strval($_POST['score1']):"|");
+        $score .= " - ";
+        $score .= (($_POST['score2'] != "null")?strval($_POST['score2']):"|");
+
+        $request_sql = "UPDATE match_event SET score=:score WHERE id=:match_id";
+        $query = $db->prepare($request_sql);
+        $query->execute(array(
+            ':match_id' => $match,
+            ':score' => $score
+        ));
+
+        $request_sql = "UPDATE participe_a SET is_best_player = 1 WHERE id=:match_id AND mail =:mail";
+        $query = $db->prepare($request_sql);
+        $query->execute(array(
+            ':match_id' => $match,
+            ':mail' => $mail
+        ));
+
+        $data = "done";
+
+        //var_dump($data);
+    }
+
     // Send data to the client.
     header('Content-Type: application/json; charset=utf-8');
     header('Cache-control: no-store, no-cache, must-revalidate');

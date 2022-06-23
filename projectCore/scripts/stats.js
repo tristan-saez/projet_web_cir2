@@ -20,8 +20,9 @@ function displayDetails(result) {
     $('#date').text(result[0]['date'])
     $('#place').text(result[0]['address']);
 
-    console.log(result[0]['score'].split(" "));
+    
     if(result[0]['score']) {
+        console.log(result[0]['score'].split(" "));
         let final_result = result[0]['score'].split(" ");
         $('#score1').val(final_result[0]);
         $('#score2').val(final_result[2]); 
@@ -47,8 +48,18 @@ function changeProfilePicture() {
 function displayProfilePicture(result) {
     document.getElementById('profile_picture').src = (result)?result:"/assets/images/defaultimage.png";
 }
-function putStats() {
 
-}
+$('#stat_form').submit((event)=> {
+    event.preventDefault();
+
+    let score1 = ($('#score1').val())?$('#score1').val():"null";
+    let score2 = ($('#score2').val())?$('#score2').val():"null";
+    let star = $('#bestplayerselection').val();
+
+    console.log(score1);
+    ajaxRequest('POST', 'php/stats.php/set-stats', setDetails,"match="+window.location.href.split("=")[1]+"&star="+star+"&score1="+score1+"&score2="+score2);
+    alert('Stats enregistrées !');
+});
+
 
 setDetails();

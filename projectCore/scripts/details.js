@@ -55,7 +55,7 @@ function displayDetails(result) {
             let starOfTheMatch = (result['currentplayers'][element][3] == 1)?"starofthematch":"";
 
             if(result['currentplayers'][element][4] == "0") {
-                profile= ` <div class="borderselection detailsprofil ${starOfTheMatch} istobeaccepted">
+                profile= ` <div class="borderselection detailsprofil istobeaccepted ${starOfTheMatch}">
                             <div class="detailprofil">
                                     <div><img onclick="acceptPlayer('${result['currentplayers'][element][5]}')" class="cursor" id="accept" style="width: 20px;" src="/assets/icons/accept.png"><img class="detailsimg" src="${profile_picture}"><img onclick="refusePlayer('${result['currentplayers'][element][5]}')" class="cursor" id="refuse" style="width: 20px;" src="/assets/icons/refuse.png"></div>
                                     <div>
@@ -67,7 +67,7 @@ function displayDetails(result) {
                 $('#detailsinformations').append(profile);
                 nb_current_player++;
             } else {
-                profile= ` <div class="borderselection detailsprofil ${starOfTheMatch} isaccepted">
+                profile= ` <div class="borderselection detailsprofil isaccepted ${starOfTheMatch}">
                         <div class="detailprofil">
                                 <div><img class="detailsimg" src="${profile_picture}"></div>
                                 <div>

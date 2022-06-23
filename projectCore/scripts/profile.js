@@ -13,7 +13,7 @@
 //------------------------------------------------------------------------------
 // Check if a user is connected or not
 
-function ShowProfile() {
+function showProfile() {
     ajaxRequest('GET', 'php/profile.php/show-profile/', showInfos);
 }
 function updateProfile() {
@@ -41,6 +41,8 @@ function showInfos(result) {
     if(result['0']['picture']) document.getElementById("profilimage").src = result['0']['picture'];
     rating(parseInt(result['0']['app_note']));
     showShape(result['0']['physical_shape']);
+
+    ajaxRequest('GET', 'php/profile.php/get-pictures-list/', showPictureList);
 }
 
 function updateRating(rating) {
@@ -64,12 +66,22 @@ function showShape(shape) {
 
 //functions for pictures
 function updatePicture() {
-    var picture = document.getElementById("physicalshape").src;
-    ajaxRequest('POST', 'php/profile.php/update-picture/', showShape, "shape="+shape);
+    var picture = document.getElementById("profile_picture").value;
+    ajaxRequest('POST', 'php/profile.php/update-picture/', showProfile, "picture="+picture);
 }
-function showPicture(shape) {
-    console.log(shape);
-    document.getElementById("physicalshape").value = shape;
+function showPictureList(pic_list) {
+    $('#profile_picture').text("");
+    var pic_choice =``;
+    let current_pic = document.getElementById("profilimage").src;
+    current_pic = current_pic.split("/")[5].split(".")[0];
+    console.log(current_pic);
+
+    for(let element in pic_list) {
+
+        pic_choice =  `<option value="${pic_list[element]}" ${(pic_list[element] == current_pic)?"selected":""}>Photo de profil ${parseInt(element)+1}</option>`;
+        $('#profile_picture').append(pic_choice);
+    }
+    
 }
 
 
@@ -103,4 +115,4 @@ $('#profilinformations').submit((event)=> {
     ajaxRequest('POST', 'php/profile.php/update-infos', updateProfile,"lastname="+last_name+"&firstname="+first_name+"&mail="+mail+"&city="+city+"&password="+password+"&birthdate="+birthdate);
 });
 
-ShowProfile();
+showProfile();
