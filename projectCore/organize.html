@@ -36,7 +36,54 @@
                         <div class="top50">Filtrage :</div>
                         <div>
                             <img style="height: 22px;width: 22px; margin-top: 4%;" src="/assets/icons/magnifier.png">
+<<<<<<< Updated upstream
                             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher par Ville..." title="Type in a name">
+=======
+                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher par nom..." title="Type in a name">
+                        </div>
+
+                        <div>
+                            <img class="top50" style="height: 22px;width: 22px; margin-top: 4%;" src="/assets/icons/filter.png">
+                            <select>
+                                <option >SPORT</option>
+                                <option >NOM</option>
+                                <option >VILLE</option>
+                                <option >DATE</option>
+                                <option >PARTICIPANTS</option>
+
+                            </select>
+                            <img class="top50" style="height: 22px;width: 22px; margin-top: 4%;" id="filterdirection" src="/assets/icons/down.png" onclick="filterchange()">
+
+                        </div>
+                    </div>
+                </div>  
+                <div class="borderselection" style="width:100%;margin-top: 0.5%;border-color: #FFD166;">
+                    <div class="legende">
+                        <div></div>
+                        <div>Sport</div>
+                        <div>&Eacutevènement</div>
+                        <div>Adresse de l'évènement - ville</div>
+                        <div>Date et heure de l'event </div>
+                        <div>participants/total</div>
+                        <div>details</div>
+                        <div>Statistiques</di>
+                    </div>
+                </div>  
+            </div>
+                <div id="eventsbox">  
+                    <div id="profilinformations"> <!--  /!\ class"borderselection -->
+                        <div id="matchstext">
+                        <div class="borderselection eventpageselection">
+                            <div class="sportype"><img  class="eventsporticon" src="/assets/sports/football.png">
+                                <div>Sport type</div>
+                            </div>
+                            <div class="eventeventitle">Titre de l'event</div>
+                            <div class="eventnormaltext">Lieu de l'event - Ville</div>
+                            <div class="eventnormaltext">Date de l'event</div>
+                            <div class="eventnormaltext"><span class="nbjoueur">50</span>/<span class="nbplayer">200</span></div>
+                            <a href="/details.html"><img  class="eventdetails cursor" src="/assets/icons/details.png"></a>
+                            <a href="/organizestats.html"><img  class="eventdetails cursor" src="/assets/icons/stat.png"></a>
+>>>>>>> Stashed changes
                         </div>
                         
                         <div style="margin-top: 1%;">
@@ -96,7 +143,7 @@
                     </div>
                 </div>
                 <div class="borderselection addicon"><a href="/organizeaddevent.html"><img class="iconaddicon cursor" src="/assets/icons/add.png"></a></div>
-
+            </div>
         </fieldset>
         </div>
     </div>
