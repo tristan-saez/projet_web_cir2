@@ -1,26 +1,6 @@
-
-/* 
-MODIFIER LES ID ET LES CLASS DU FIST NAME DANS LE PROFIL CAR IL Y A 2 IDs
-BON LUNDI A TOI DE VENDREDI DERNIER 
-
-*/
-var test = 2;
+    
 var varsportchange;
 varsportchange = 2;
-function picturechange(){
-    switch(test){
-
-        case 1: 
-        document.getElementById("profilimage").src = "/assets/images/defaultimage.png";
-        test = 2;
-        break;
-        case 2: 
-        document.getElementById("profilimage").src = "/assets/images/wrongimage.png";
-        test = 1;
-        break;
-    }
-}
-
 
 function sportchange(sport){
     //alert(sport)
