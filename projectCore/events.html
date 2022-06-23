@@ -37,21 +37,35 @@
                         <div class="top50">Filtrage :</div>
                         <div>
                             <img style="height: 22px;width: 22px; margin-top: 4%;" src="/assets/icons/magnifier.png">
-                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher par nom..." title="Type in a name">
+                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher par Ville..." title="Type in a name">
                         </div>
-
+                        
+                        <div style="margin-top: 1%;">
+                            <select name="sportfiltration" id="sportfiltration">
+                                <option value="soccer">+7 jours</option>
+                                <option value="basketball">+15 jours</option>
+                                <option value="football">+30 jours</option>
+                            </select>
+                        </div>
                         <div>
                             <img class="top50" style="height: 22px;width: 22px; margin-top: 4%;" src="/assets/icons/filter.png">
-                            <select>
-                                <option >SPORT</option>
-                                <option >NOM</option>
-                                <option >VILLE</option>
-                                <option >DATE</option>
-                                <option >PARTICIPANTS</option>
-
+                            <select name="sportfiltration" id="sportfiltration">
+                                        <option value="soccer">Foot</option>
+                                        <option value="basketball">Basket</option>
+                                        <option value="football">Rugby</option>
+                                        <option value="swimming">Natation</option>
+                                        <option value="baseball">Baseball</option>
+                                        <option value="badminton">Badminton</option>
+                                        <option value="tennis">Tennis</option>
+                                        <option value="default">Autre</option>
                             </select>
+
                             <img class="top50" style="height: 22px;width: 22px; margin-top: 4%;" id="filterdirection" src="/assets/icons/down.png" onclick="filterchange()">
 
+                        </div>
+                        <div>
+                            <label>Match Complet :</label>
+                            <input type="checkbox" value="Oiuu">
                         </div>
                         
                         
