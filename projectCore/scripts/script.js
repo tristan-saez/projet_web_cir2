@@ -2,7 +2,7 @@
 var varsportchange;
 varsportchange = 2;
 
-function sportchange(sport){
+function sportchange(sport){ //Allow the picture of the selected sport to change automatically whenever the user change its selection. 
     //alert(sport)
     document.getElementById("islessknownsport").style.display = "none";
     switch(sport){
@@ -43,34 +43,6 @@ function sportchange(sport){
 }
 
 
-
-
-function profilchange(profilpicture){
-    //alert(sport)
-    switch(profilpicture){
-        case "PhysicalShapeA": 
-        document.getElementById("profilimage").src = "/assets/profilpictures/pp1.png";
-        break;
-        case "PhysicalShapeB": 
-        document.getElementById("profilimage").src = "/assets/profilpictures/pp2.png";
-        break;
-        case "PhysicalShapeC": 
-        document.getElementById("profilimage").src = "/assets/profilpictures/pp3.png";
-        break;
-        case "PhysicalShapeD": 
-        document.getElementById("profilimage").src = "/assets/profilpictures/pp4.png";
-        break;
-        case "PhysicalShapeE":
-        document.getElementById("profilimage").src = "/assets/profilpictures/pp5.png";
-        break;
-        case "PhysicalShapeF": 
-        document.getElementById("profilimage").src = "/assets/profilpictures/pp6.png";
-        break;
-        case "PhysicalShapeG": 
-        document.getElementById("profilimage").src = "/assets/profilpictures/pp7.png";
-        break;
-    }
-}
 
 
 

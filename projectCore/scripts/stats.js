@@ -11,7 +11,6 @@
 function setDetails() {
     ajaxRequest('POST', 'php/stats.php/display-details', displayDetails,"match="+window.location.href.split("=")[1]);
 }
-
 function displayDetails(result) {
     document.getElementById("sportimage").src = result[0]['picture'];
     $('#sportname').text(result[0][5]);
@@ -40,7 +39,6 @@ function displayDetails(result) {
     }
     changeProfilePicture();
 }
-
 function changeProfilePicture() {
     let profile_picture = $('#bestplayerselection').val();
     ajaxRequest('POST', 'php/stats.php/get-profile-picture', displayProfilePicture,"profile-picture="+profile_picture);

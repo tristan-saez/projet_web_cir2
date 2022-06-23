@@ -12,7 +12,7 @@
 //--- redirectAfterConnection --------------------------------------------------
 //------------------------------------------------------------------------------
 // redirect after the connection
-function redirectAfterConnection(result) {
+function redirectAfterConnection(result) { 
     if(result == "success") {
         window.location.replace("index.html");
     } else if(result == "mail") {
