@@ -23,7 +23,7 @@
     // }
 
     //create user
-    if($requestMethod == 'GET' && $requestRessource == 'match-list') {
+    if($requestMethod == 'GET' && $requestRessource == 'filter-match-list') {
         $request_sql = "SELECT m.id, m.date, m.start_hour, m.duration, m.name, m.address, m.nb_player, c.name, s.name, s.picture FROM match_event m JOIN city c ON c.insee = m.insee JOIN sports s ON s.id = m.id_sports";
         $query = $db->prepare($request_sql);
         $query->execute();
@@ -43,7 +43,7 @@
 
     }
 
-    if($requestMethod == 'GET' && $requestRessource == 'match-created-list') {
+    if($requestMethod == 'GET' && $requestRessource == 'filter-match-created-list') {
         $request_sql = "SELECT m.id, m.date, m.start_hour, m.duration, m.name, m.address, m.nb_player, c.name, s.name, s.picture FROM match_event m JOIN city c ON c.insee = m.insee JOIN sports s ON s.id = m.id_sports WHERE m.mail =:mail";
         $query = $db->prepare($request_sql);
         $query->execute(array(
@@ -63,7 +63,7 @@
         }
     }
 
-    if($requestMethod == 'GET' && $requestRessource == 'match-coming-list') {
+    if($requestMethod == 'GET' && $requestRessource == 'filter-match-coming-list') {
         $request_sql = "SELECT m.id, m.date, m.start_hour, m.duration, m.name, m.address, m.nb_player, c.name, s.name, s.picture FROM participe_a p JOIN match_event m ON p.id = m.id JOIN city c ON c.insee = m.insee JOIN sports s ON s.id = m.id_sports WHERE p.mail =:m_mail AND p.demand = 1";
         $query = $db->prepare($request_sql);
         $query->execute(array(

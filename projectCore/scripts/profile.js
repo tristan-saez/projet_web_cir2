@@ -25,7 +25,7 @@ function updateProfile() {
     document.getElementById('city').disabled=true;
     $('#password').val("");
     document.getElementById('maj_button').style.display="none";
-    ShowProfile();
+    showProfile();
 }
 
 function showInfos(result) {
