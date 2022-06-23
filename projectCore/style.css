@@ -540,8 +540,6 @@ border-radius: 10px;
             margin-top: 1%;
         }
 
-        .addiconback{
-        }
 
         .iconaddicon{
             margin-left: 50%;
@@ -563,7 +561,7 @@ border-radius: 10px;
         .top50{
             margin-top: 1%;
         }
-                /* STATISTIQUES */
+                /* STATISTICS */
 
         .imgplayerstat{
             margin-top: 2%;
@@ -656,6 +654,8 @@ border-radius: 10px;
             height: 40px;
             width: 40px;
         }
+
+
 /* FOOTER RELATED CONTENT */
 
 .footer{
