@@ -20,8 +20,11 @@ function addStats(match) {
 }
 
 function displayMatchesCreated(result) {
+    var match_template = "";
+    $('#matchstext').text("");
+    
     for(var element in result) {
-        var match_template = `<div class="borderselection eventpageselection">
+        match_template = `<div class="borderselection eventpageselection">
             <div class="sportype"><img  class="eventsporticon" src="${result[element]['picture']}">
                 <div>${result[element][8]}</div>
             </div>
