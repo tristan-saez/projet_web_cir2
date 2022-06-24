@@ -11,12 +11,13 @@
       exit;
     }
   
+    //get request done and modify it for use
     $requestMethod = $_SERVER['REQUEST_METHOD'];
     $request = substr($_SERVER['PATH_INFO'], 1);
     $request = explode('/', $request);
     $requestRessource = array_shift($request);
 
-    //create user
+    //create match
     if($requestMethod == 'POST' && $requestRessource == 'create-match') {
         $data = "good";
 
@@ -79,8 +80,6 @@
                 ':mail'=>$mail,
                 ':insee'=>$insee
             ));
-
-            //$request_sql = "INSERT INTO a_lieu_a (id, insee) VALUES (:id, :insee)";
         }
     }
 

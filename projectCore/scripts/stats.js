@@ -2,16 +2,18 @@
 * @Author: Tristan Saëz & Antonin Soquet
 * @Company: ISEN Yncréa Ouest
 * @Email: tristan.saez@isen-ouest.yncrea.fr - antonin.soquet@isen-ouest.yncrea.fr
-* @Created Date: 16-Jun-2022
-* @Last Modified: 16-Jun-2022
 */
 
 'use strict';
 
+//--- setDetails -------------------------------------------------------
+// AJAX request to change/add stats
 function setDetails() {
     ajaxRequest('POST', 'php/stats.php/display-details', displayDetails,"match="+window.location.href.split("=")[1]);
 }
 
+//--- displayDetails ---------------------------------------------------
+// display details on user screen
 function displayDetails(result) {
     document.getElementById("sportimage").src = result[0]['picture'];
     $('#sportname').text(result[0][5]);
@@ -41,14 +43,20 @@ function displayDetails(result) {
     changeProfilePicture();
 }
 
+//--- changeProfilePicture -------------------------------------------------------
+// get displayed user's profile picture
 function changeProfilePicture() {
     let profile_picture = $('#bestplayerselection').val();
     ajaxRequest('POST', 'php/stats.php/get-profile-picture', displayProfilePicture,"profile-picture="+profile_picture);
 }
+
+//--- displayProfilePicture -------------------------------------------------------
+// show displayed user's profile picture on user's screen
 function displayProfilePicture(result) {
     document.getElementById('profile_picture').src = (result)?result:"/assets/images/defaultimage.png";
 }
 
+// update stats on form submit with an AJAX request
 $('#stat_form').submit((event)=> {
     event.preventDefault();
 

@@ -2,16 +2,14 @@
 * @Author: Tristan Saëz & Antonin Soquet
 * @Company: ISEN Yncréa Ouest
 * @Email: tristan.saez@isen-ouest.yncrea.fr - antonin.soquet@isen-ouest.yncrea.fr
-* @Created Date: 16-Jun-2022
-* @Last Modified: 16-Jun-2022
 */
 
 'use strict';
 
 //------------------------------------------------------------------------------
-//--- redirectAfterConnection --------------------------------------------------
+//--- redirectAfterInscription -------------------------------------------------
 //------------------------------------------------------------------------------
-// redirect after the connection
+// redirect after the account creation
 function redirectAfterInscription(result) {
     if(result == "good") {
         console.log("inscription complete !");
@@ -20,10 +18,7 @@ function redirectAfterInscription(result) {
     }
 }
 
-function isPictureAdded(result) {
-    console.log(result);
-}
-
+// get form datas
 let firstname = document.getElementById('firstname');
 let lastname = document.getElementById('lastname');
 let mail = document.getElementById('mail');
@@ -35,15 +30,7 @@ let picture = document.getElementById("picture");
 
 let matching_passwords = false;
 
-// $('#picture').change(() => {
-//     const reader = new FileReader();
-//     reader.readAsDataURL(picture.files[0]);
-//     var data = reader.result
-
-//     console.log(data);  
-//     ajaxRequest('POST', 'php/inscription.php/upload-picture', isPictureAdded, data);
-// });
-
+//just some css modifications to show if passwords matches
 $('#password_confirmation').keyup(() => {
     if(password.value == password_confirmation.value) {
         password_confirmation.style = "border: solid 1px green;";
@@ -54,6 +41,7 @@ $('#password_confirmation').keyup(() => {
     }
 });
 
+// send ajax request to create a user and check if passwords matches
 $('#inscription_form').submit((event) => {
     event.preventDefault();
 

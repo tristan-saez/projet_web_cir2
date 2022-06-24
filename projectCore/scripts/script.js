@@ -1,4 +1,9 @@
-    
+/**
+* @Author: Tristan Saëz & Antonin Soquet
+* @Company: ISEN Yncréa Ouest
+* @Email: tristan.saez@isen-ouest.yncrea.fr - antonin.soquet@isen-ouest.yncrea.fr
+*/    
+
 var varsportchange;
 varsportchange = 2;
 

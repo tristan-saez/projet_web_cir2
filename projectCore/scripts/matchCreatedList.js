@@ -2,23 +2,30 @@
 * @Author: Tristan Saëz & Antonin Soquet
 * @Company: ISEN Yncréa Ouest
 * @Email: tristan.saez@isen-ouest.yncrea.fr - antonin.soquet@isen-ouest.yncrea.fr
-* @Created Date: 16-Jun-2022
-* @Last Modified: 16-Jun-2022
 */
 
 'use strict';
 
+//--- requestUpdateCreated -------------------------------------------------------
+// ajax request to get user's created matchs
 function requestUpdateCreated() {
     ajaxRequest('GET', 'php/updateDatas.php/match-created-list', displayMatchesCreated);
 }
 
+//--- showDetailsCreated -------------------------------------------------------
+// redirect to details page
 function showDetailsCreated(match) {
     window.location.replace("details.html?match="+match);
 }
+
+//--- addStats-------------------------------------------------------
+// show stats page
 function addStats(match) {
     window.location.replace("organizestats.html?match="+match);
 }
 
+//--- displayMatchesCreated -------------------------------------------------------
+// display matches list on user screen
 function displayMatchesCreated(result) {
     var match_template = "";
     $('#matchstext').text("");
@@ -38,6 +45,8 @@ function displayMatchesCreated(result) {
         if(result[element]['is_full']) $('#matchstext').append(match_template);
     }
 }
+
+// send datas to filter matches
 $('#filter_form').change(()=> {
 
     let city = (document.getElementById('cityfiltration').value == '')?0:document.getElementById('cityfiltration').value;
