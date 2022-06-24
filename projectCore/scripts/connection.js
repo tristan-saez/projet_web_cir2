@@ -2,8 +2,6 @@
 * @Author: Tristan Saëz & Antonin Soquet
 * @Company: ISEN Yncréa Ouest
 * @Email: tristan.saez@isen-ouest.yncrea.fr - antonin.soquet@isen-ouest.yncrea.fr
-* @Created Date: 16-Jun-2022
-* @Last Modified: 16-Jun-2022
 */
 
 'use strict';
@@ -30,6 +28,7 @@ function redirectAfterConnection(result) {
 let mail = document.getElementById('mail');
 let password = document.getElementById('password');
 
+//on form submition send datas to php
 $('#connection_form').submit((event) => {
     event.preventDefault();
     ajaxRequest('POST', 'php/connection.php/account-connect', redirectAfterConnection, "mail="+mail.value+"&password="+password.value);

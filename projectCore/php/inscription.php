@@ -9,17 +9,13 @@
       header ('HTTP/1.1 503 Service Unavailable');
       exit;
     }
-  
+    
+    //get request done and modify it for use
     $requestMethod = $_SERVER['REQUEST_METHOD'];
     $request = substr($_SERVER['PATH_INFO'], 1);
     $request = explode('/', $request);
     $requestRessource = array_shift($request);
 
-
-    // if($requestMethod == 'POST' && $requestRessource == 'upload-picture') {
-    //     var_dump($_POST);
-    //     $data ="success";
-    // }
 
     //create user
     if($requestMethod == 'POST' && $requestRessource == 'account-create') {

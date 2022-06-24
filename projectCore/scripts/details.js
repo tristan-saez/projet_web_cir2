@@ -2,15 +2,18 @@
 * @Author: Tristan Saëz & Antonin Soquet
 * @Company: ISEN Yncréa Ouest
 * @Email: tristan.saez@isen-ouest.yncrea.fr - antonin.soquet@isen-ouest.yncrea.fr
-* @Created Date: 16-Jun-2022
-* @Last Modified: 16-Jun-2022
 */
 
 'use strict';
 
+//--- joinMatchPlease ---------------------------------------------------------
+// send ajax request to join a match
 function joinMatchPlease() {
     ajaxRequest('POST', 'php/details.php/join-match', joinMatchCallback,"match="+window.location.href.split("=")[1]);
 }
+
+//--- joinMatchCallback ---------------------------------------------------------
+// if an issue occured during processing match join, send an alert about it
 function joinMatchCallback(result) {
     if(result == "good") {
         alert("Votre inscription a bien été enregistrée !");
@@ -23,18 +26,27 @@ function joinMatchCallback(result) {
     }
 }
 
+//--- setDetails ---------------------------------------------------------
+// ajaxRequest to get details on a match
 function setDetails() {
     ajaxRequest('POST', 'php/details.php/set-details', displayDetails,"match="+window.location.href.split("=")[1]);
 }
-
+//--- acceptPlayer -------------------------------------------------------
+// ajaxRequest to accept player if details page is on organizermode 
 function acceptPlayer(player) {
     ajaxRequest('POST', 'php/details.php/accept-player', setDetails,"player="+player+"&match="+window.location.href.split("=")[1]);
 }
+//--- refusePlayer -------------------------------------------------------
+// ajaxRequest to refuse player if details page is on organizermode 
 function refusePlayer(player) {
     ajaxRequest('POST', 'php/details.php/refuse-player', setDetails,"player="+player+"&match="+window.location.href.split("=")[1]);
 }
 
+//--- displayDetails -------------------------------------------------------
+// display details on the user screen with players
 function displayDetails(result) {
+
+    //details informations
     $('#detailsinformations').text("");
     document.getElementById("sporticon").src = result[0][11];
     $('#sportname').text(result[0][10]);
@@ -47,6 +59,7 @@ function displayDetails(result) {
     $('#duration').text(result[0][7]);
     (!result[0][8])?$('#score').text("\/ - \/"):$('#score').text(result[0][8]);
 
+    //player informations with organiser mode if the person is an organiser 
     let profile = ``;
     let nb_current_player = 0;
     if(result['is_organiser']) {

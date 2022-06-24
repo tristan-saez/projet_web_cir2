@@ -2,20 +2,21 @@
 * @Author: Tristan Saëz & Antonin Soquet
 * @Company: ISEN Yncréa Ouest
 * @Email: tristan.saez@isen-ouest.yncrea.fr - antonin.soquet@isen-ouest.yncrea.fr
-* @Created Date: 16-Jun-2022
-* @Last Modified: 16-Jun-2022
 */
 
 'use strict';
 
 //------------------------------------------------------------------------------
-//--- CheckConnection ----------------------------------------------------------
+//--- showProfile --------------------------------------------------------------
 //------------------------------------------------------------------------------
-// Check if a user is connected or not
+// ajax request to get profile details
 
 function showProfile() {
     ajaxRequest('GET', 'php/profile.php/show-profile/', showInfos);
 }
+
+//--- updateProfile -------------------------------------------------------
+// lock profile fields after modification
 function updateProfile() {
     document.getElementById('lastnamefield').disabled=true;
     document.getElementById('firstnamefield').disabled=true;
@@ -28,6 +29,8 @@ function updateProfile() {
     showProfile();
 }
 
+//--- showInfos -------------------------------------------------------
+// show profile infos in user screen
 function showInfos(result) {
     console.log(result);
     $('.lastname').text(result['0']['last_name']);
@@ -45,30 +48,40 @@ function showInfos(result) {
     ajaxRequest('GET', 'php/profile.php/get-pictures-list/', showPictureList);
 }
 
+//--- updateRating -------------------------------------------------------
+// update rating value
 function updateRating(rating) {
     console.log("updating...");
     ajaxRequest('POST', 'php/profile.php/update-rating/', showRating, "rating="+rating);
 }
 
+//--- showRating -------------------------------------------------------
+// show rating stars
 function showRating(result) {
     rating(parseInt(result));
 }
 
-//functions for physical shape
+//--- updateShape -------------------------------------------------------
+// update physical shape value
 function updateShape() {
     var shape = document.getElementById("physicalshape").value;
     ajaxRequest('POST', 'php/profile.php/update-shape/', showShape, "shape="+shape);
 }
+//--- showShape -------------------------------------------------------
+// show physical shape value
 function showShape(shape) {
     console.log(shape);
     document.getElementById("physicalshape").value = shape;
 }
 
-//functions for pictures
+//--- updatePicture -------------------------------------------------------
+// update picture in the database for current user
 function updatePicture() {
     var picture = document.getElementById("profile_picture").value;
     ajaxRequest('POST', 'php/profile.php/update-picture/', showProfile, "picture="+picture);
 }
+//--- showPictureList -------------------------------------------------------
+// show picture list to user in a <select>
 function showPictureList(pic_list) {
     $('#profile_picture').text("");
     var pic_choice =``;
@@ -84,15 +97,18 @@ function showPictureList(pic_list) {
     
 }
 
-
+//--- redirectAfterDisconnection -------------------------------------------------------
+// redirect user after its disconnection
 function redirectAfterDisconnection() {
     window.location.replace("connection.html");
 }
 
+//If the user click on disconnect button, send an ajaxRequest to disconnect
 $('#disconnect').click(()=> {
     ajaxRequest('POST', 'php/connection.php/account-disconnect', redirectAfterDisconnection);
 });
 
+// change page to let user edit its profile. pay attention to some field like birthdate & password that needs to be re-set
 $('#settings').click(()=> {
     document.getElementById('lastnamefield').disabled=false;
     document.getElementById('firstnamefield').disabled=false;
@@ -103,6 +119,7 @@ $('#settings').click(()=> {
     document.getElementById('maj_button').style.display="block";
 });
 
+// on modification form send get modified values and send an AJAX request to modify them
 $('#profilinformations').submit((event)=> {
     event.preventDefault();
 

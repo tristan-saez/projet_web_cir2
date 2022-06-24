@@ -10,13 +10,14 @@
       header ('HTTP/1.1 503 Service Unavailable');
       exit;
     }
-  
+    
+    //get request done and modify it for use
     $requestMethod = $_SERVER['REQUEST_METHOD'];
     $request = substr($_SERVER['PATH_INFO'], 1);
     $request = explode('/', $request);
     $requestRessource = array_shift($request);
 
-    // Check if an user is connected
+    // function to update app_note for user
     if($requestMethod == 'POST' && $requestRessource == 'update-rating') {
         if(isset($_SESSION['mail'])) {
             $request = "UPDATE profile SET app_note = ".$_POST['rating'];
@@ -40,6 +41,7 @@
         }
     }
 
+    // function to get all pictures 
     if($requestMethod == 'GET' && $requestRessource == 'get-pictures-list') {
         $i = 0;
         $data = array();
@@ -50,6 +52,7 @@
         }
     }
 
+    // function to update picture for user
     if($requestMethod == 'POST' && $requestRessource == 'update-picture') {
         if(isset($_SESSION['mail'])) {
             $picture = "/assets/profilpictures/".$_POST['picture'].".png";
@@ -63,7 +66,7 @@
         }
     }
 
-    // Check if an user is connected
+    // function to show profile of the user
     if($requestMethod == 'GET' && $requestRessource == 'show-profile') {
         if(isset($_SESSION['mail'])) {
             $request = "SELECT * FROM profile pf JOIN city ct ON ct.insee = pf.insee ";
@@ -77,6 +80,7 @@
         }
     }
 
+    // function to update infos for user
     if($requestMethod == 'POST' && $requestRessource == 'update-infos') {
         $data = "good";
             $mail = $_POST['mail'];

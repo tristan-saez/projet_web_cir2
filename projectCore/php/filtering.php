@@ -10,7 +10,8 @@
       header ('HTTP/1.1 503 Service Unavailable');
       exit;
     }
-  
+    
+    //get request done and modify it for use
     $requestMethod = $_SERVER['REQUEST_METHOD'];
     $request = substr($_SERVER['PATH_INFO'], 1);
     $request = explode('/', $request);
@@ -22,7 +23,7 @@
     //     $data ="success";
     // }
 
-    //create user
+    //filter all matchs
     if($requestMethod == 'GET' && $requestRessource == 'filter-match-list') {
         $request_sql = "SELECT m.id, m.date, m.start_hour, m.duration, m.name, m.address, m.nb_player, c.name, s.name, s.picture FROM match_event m JOIN city c ON c.insee = m.insee JOIN sports s ON s.id = m.id_sports WHERE 1=1 ";
         if($_GET['city'] != '0') {
@@ -62,6 +63,7 @@
         }
     }
 
+    //filter created matchs
     if($requestMethod == 'GET' && $requestRessource == 'filter-match-created-list') {
         $request_sql = "SELECT m.id, m.date, m.start_hour, m.duration, m.name, m.address, m.nb_player, c.name, s.name, s.picture FROM match_event m JOIN city c ON c.insee = m.insee JOIN sports s ON s.id = m.id_sports WHERE m.mail =:mail ";
         if($_GET['city'] != '0') {
@@ -102,6 +104,7 @@
         }
     }
 
+    //filter joined matchs
     if($requestMethod == 'GET' && $requestRessource == 'filter-match-coming-list') {
         $request_sql = "SELECT m.id, m.date, m.start_hour, m.duration, m.name, m.address, m.nb_player, c.name, s.name, s.picture FROM participe_a p JOIN match_event m ON p.id = m.id JOIN city c ON c.insee = m.insee JOIN sports s ON s.id = m.id_sports WHERE p.mail =:m_mail AND p.demand = 1 ";
         if($_GET['city'] != '0') {

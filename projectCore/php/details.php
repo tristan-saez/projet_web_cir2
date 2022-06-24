@@ -10,17 +10,12 @@
       header ('HTTP/1.1 503 Service Unavailable');
       exit;
     }
-  
+    
+    //get request done and modify it for use
     $requestMethod = $_SERVER['REQUEST_METHOD'];
     $request = substr($_SERVER['PATH_INFO'], 1);
     $request = explode('/', $request);
     $requestRessource = array_shift($request);
-
-
-    // if($requestMethod == 'POST' && $requestRessource == 'upload-picture') {
-    //     var_dump($_POST);
-    //     $data ="success";
-    // }
 
     //function to join match
     if($requestMethod == 'POST' && $requestRessource == 'join-match') {
@@ -109,6 +104,7 @@
         //var_dump($data);
     }
 
+    //function to accept player to a match
     if($requestMethod == 'POST' && $requestRessource == 'accept-player') {
         $match =  $_POST['match'];
         $mail = $_POST['player'];
@@ -138,6 +134,7 @@
         //var_dump($data);
     }
 
+    //function to refuse player to a match
     if($requestMethod == 'POST' && $requestRessource == 'refuse-player') {
         $match =  $_POST['match'];
         $mail = $_POST['player'];

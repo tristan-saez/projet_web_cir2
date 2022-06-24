@@ -2,8 +2,6 @@
 * @Author: Tristan Saëz & Antonin Soquet
 * @Company: ISEN Yncréa Ouest
 * @Email: tristan.saez@isen-ouest.yncrea.fr - antonin.soquet@isen-ouest.yncrea.fr
-* @Created Date: 16-Jun-2022
-* @Last Modified: 16-Jun-2022
 */
 
 'use strict';
@@ -17,6 +15,8 @@ function CheckConnection() {
     ajaxRequest('GET', 'php/connection.php/check-connection/', redirectToConnect);
 }
 
+//--- redirectToConnect -------------------------------------------------------
+// redirect if user is not connected
 function redirectToConnect(isconnected) {
     if(!isconnected) {
         console.log("not connected : redirecting...");
